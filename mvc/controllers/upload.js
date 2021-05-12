@@ -19,7 +19,6 @@ function Upload(req, res) {
     subjectID,
     fileType,
     owner,
-    fileName,
   }
 
   try {
@@ -46,8 +45,7 @@ function Upload(req, res) {
       file.path = path.join(upload_path, file.name);
     })
     .on("file", async (fileName, file) => {
-      fileName = file.name;
-      await saveFile(FileData);
+      await saveFile(FileData,file);
     })
     .on("end", () => {
       console.log("======> upload done");
@@ -58,14 +56,14 @@ function Upload(req, res) {
 }
 
 
-async function saveFile(data) {
-  const file = new File();
-  file.owner = data.owner;
-  file.subject = data.subjectID;
-  file.fileType = data.fileType;
-  file.name = data.fileName;
-  await file.save();
-  console.log(data)
+ function saveFile(data, file) {
+  const newFile = new File();
+  newFile.owner = data.owner;
+  newFile.subject = data.subjectID;
+  newFile.fileType = data.fileType;
+  newFile.name = file.name[0];
+  newFile.save();
+  console.log(newFile)
 }
 
 function renderUploadPage(req, res) {
