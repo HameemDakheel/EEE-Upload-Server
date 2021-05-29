@@ -4,6 +4,7 @@
 /*! tailwindcss v2.0.3 | MIT License | https://tailwindcss.com*/
 
 /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+
 .highlight {
   -webkit-transition: background .4s ease-in-out;
   background: rgb(14, 164, 233);
@@ -261,6 +262,14 @@ video {
   .container {
     max-width: 1536px;
   }
+}
+@media (max-width:460px){
+.md-screen {
+  width: 100%;
+  margin-top: .85rem;
+}
+}
+.md-screen {
 }
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
