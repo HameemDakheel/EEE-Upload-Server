@@ -238,7 +238,8 @@ function getFilesObj(files, dir) {
   var newFileList = files.map(function (file) {
     var fileIcon = {};
     var isDir = file.stat && file.stat.isDirectory();
-    var path = dir.split("/").map(function (c) {
+    var path = dir;
+    var url = dir.split("/").map(function (c) {
       return encodeURIComponent(c);
     });
 
@@ -260,8 +261,7 @@ function getFilesObj(files, dir) {
     //     classes.push(icon.className);
     //   }
     // }
-
-    path.push(encodeURIComponent(file.name));
+    url.push(encodeURIComponent(file.name));
 
     var date =
       file.stat && file.name !== ".."
@@ -275,7 +275,8 @@ function getFilesObj(files, dir) {
       size: size,
       date: date,
       icon: fileIcon,
-      url: normalizeSlashes(normalize(path.join("/"))),
+      path: path,
+      url: normalizeSlashes(normalize(url.join("/"))),
     };
   });
   return newFileList;

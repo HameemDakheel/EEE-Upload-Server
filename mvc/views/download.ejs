@@ -196,7 +196,7 @@
                   <% if (file.name === '..') { %>
                     <input type="checkbox"  class="flex ml-3 mr-2 my-4" />
                   <% }else { %>
-                    <input type="checkbox" name="options[<%= i %>]" class="flex ml-3 mr-2 my-4" value="<%= file.url %>" />
+                    <input type="checkbox" name="options[<%= i %>]" class="flex ml-3 mr-2 my-4" value="<%= file.path+file.name %>" />
                     <% i++; %>
                     <% } %>
                     <a
