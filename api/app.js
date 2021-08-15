@@ -3,6 +3,8 @@ require("dotenv").config();
 const express = require("express");
 const http = require("http");
 const debug = require("debug");
+const cors = require("cors");
+const logger = require("morgan");
 
 require("./db")
 
@@ -10,6 +12,8 @@ const router = require("./router")
 const port = normalizePort(process.env.PORT || "8080");
 const app = express();
 
+app.use(cors());
+app.use(logger("dev"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
