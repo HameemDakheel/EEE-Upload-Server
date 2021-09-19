@@ -1,6 +1,10 @@
 const router = require("express").Router();
 const userController = require("./controllers/users");
+const downloadController = require("./controllers/download");
 
+router.get("/dir-tree",downloadController.getDefaultTree);
+router.get("/download", downloadController.downloadOneFile);
+router.get("/download-all",downloadController.downloadFiles);
 router.post("/user/check-token", userController.checkToken);
 router.post("/user/login", userController.login);
 router.post(

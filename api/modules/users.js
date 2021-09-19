@@ -8,6 +8,10 @@ const User = new mongoose.Schema({
     unique: true,
     required: true,
   },
+  password:{
+    type:String,
+    required:true
+  },
   salt: {
     type: String,
     unique: true,
@@ -36,9 +40,10 @@ User.methods.setPassword = function (password){
 }
 
 User.methods.checkPassword = function (password) {
-  let chash = crypto.pbkdf2Sync(password, this.salt, 1000, 64, "sha512").toString("hex");
+  // let hash = crypto.pbkdf2Sync(password, this.salt, 1000, 64, "sha512").toString("hex");
 
-  return this.hash === chash;
+  // return this.hash === hash;
+  return this.password === password;
 };
 
 User.methods.generateToken = function (){

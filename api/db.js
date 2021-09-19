@@ -1,21 +1,19 @@
 const mongoose = require("mongoose");
 const connectionString = process.env.CONNECTION_STRING || "mongodb://localhost:27017/";
 
-require("./modules/users") 
+require("./modules/users")
 
 if (process.env.APP_ENV === "production") {
   URI = process.env.PRODUCTION_CONNECTION_STRING;
 }
 
-mongoose.connect(connectionString, { useNewUrlParser: true });
+mongoose.connect(connectionString, { useNewUrlParser: true ,useUnifiedTopology:true,useCreateIndex:true});
 
 mongoose.connection.on("connected", () =>
   console.log(`connected to mongo database on ${connectionString}`)
 );
 
-mongoose.connection.on("connected", () => {
-  console.log("mongoose connected to", connectionString);
-});
+
 mongoose.connection.on("error", (err) => {
   console.log("mongoose connection error", err);
 });

@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React from 'react';
+import LoginModal from "./modals/loginModal";
 export default function Navbar() {
 	return (
     <>
@@ -51,15 +51,7 @@ export default function Navbar() {
                 Dark Theme
               </label>
             </div>
-            <button
-              type="button"
-              className="btn btn-primary shadow-4-primary me-3"
-              data-mdb-toggle="modal"
-              data-mdb-target="#exampleModal"
-              role="button"
-            >
-              Login
-            </button>
+                <LoginModal />
           </div>
         </div>
       </nav>

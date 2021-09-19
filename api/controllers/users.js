@@ -1,23 +1,24 @@
 const mongoose = require("mongoose");
 const User = mongoose.model("User");
 const jwt = require("jsonwebtoken");
-const getDirTree = require("directory-tree");
 
-function getUsers(req, res){
-  User.find({},(err, users) =>{
-    users.map(user =>{
-      if(user.privileges === "admin"){
-        return
-      }else {
+function getUsers(req, res) {
+  User.find({}, (err, users) => {
+    users.map((user) => {
+      if (user.privileges === "admin") {
+        return;
+      } else {
         return user;
       }
     });
-    if (err || users.length) return res.status(400).json({error:"true", message:err.message});
-    return res.status(200).json({users});
-  })
+    if (err || users.length)
+      return res.status(400).json({ error: "true", message: err.message });
+    return res.status(200).json({ users });
+  });
 }
 
 function login(req, res) {
+  console.log(req.body);
   const { username, password } = req.body;
   if (!username || !password) {
     return res
@@ -30,13 +31,11 @@ function login(req, res) {
         .status(401)
         .json({ error: "true", message: err || "user does not exist" });
     } else if (user.checkPassword(password)) {
-      var dirTree = getDirTree(user.path)
       return res.status(200).json({
         error: "",
         message: "login success",
         token: user.generateToken(),
-        user: user,
-        dirTree
+        // user: user,
       });
     } else {
       return res.status(401).json({ error: "true", message: "wrong password" });
@@ -121,9 +120,7 @@ function checkToken(req, res, next) {
       next();
     }
   } else {
-    return res
-      .status(401)
-      .json({ error: "true", message: "token is invalid"});
+    return res.status(401).json({ error: "true", message: "token is invalid" });
   }
 }
 
@@ -134,11 +131,11 @@ function checkPrivileges(req, res, next) {
       return res
         .status(403)
         .json({ error: "true", message: err || "user not found" });
-      if (user.privileges === "admin") {
-        next();
-      } else {
-        return res.status(403).json({ error: "true", message: "Forbidden" });
-      }
+    }
+    if (user.privileges === "admin") {
+      next();
+    } else {
+      return res.status(403).json({ error: "true", message: "Forbidden" });
     }
   });
 }

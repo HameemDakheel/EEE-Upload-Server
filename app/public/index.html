@@ -25,21 +25,15 @@
         	<div id="root" class="container-lg container-fluid h-100"></div>
   </body>
 
-  <!-- MDB -->
   <script type="text/javascript" src="../src/index.js"></script>
+  <!-- MDB -->
+  <!-- <script type="text/javascript" src="./js/mdb.min.js"></script> -->
   <!-- Custom scripts -->
   <script type="text/javascript">
     (function () {
       let num = Math.floor(Math.random() * 6);
       let main = document.querySelector("body");
       main.classList.add(`random-${num}`);
-      console.log(main);
     })();
-    const searchButton = document.getElementById("search-button");
-    const searchInput = document.getElementById("search-input");
-    searchButton.addEventListener("click", () => {
-      const inputValue = searchInput.value;
-      alert(inputValue);
-    });
   </script>
 </html>

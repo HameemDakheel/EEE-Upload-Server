@@ -5,6 +5,7 @@ const http = require("http");
 const debug = require("debug");
 const cors = require("cors");
 const logger = require("morgan");
+const multer = require('multer');
 
 require("./db")
 
