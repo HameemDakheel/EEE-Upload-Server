@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState} from "react";
 import {
   MDBBtn,
   MDBModal,
@@ -7,14 +7,13 @@ import {
   MDBModalBody,
   MDBInput,
 } from "mdb-react-ui-kit";
-import { Redirect } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import Axios from "axios";
-export default function LoginModal() {
+export default function LoginModal({ setLoggedIn }) {
   const [loginModal, setLoginModal] = useState(false);
-  const [token, setToken] = useState("");
-
   const toggleShow = () => setLoginModal(!loginModal);
-  const [formValue, setFormValue] = useState({username: "", password: ""});
+  const [formValue, setFormValue] = useState({ username: "", password: "" });
+  const history = useHistory();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,10 +22,15 @@ export default function LoginModal() {
       password: e.target[1].value,
     };
     try {
-      const response = await Axios.post("http://localhost:8080/user/login", data);
-      console.log(response);
-      setToken(response.data.token)
-      localStorage.setItem("token", JSON.stringify(token));
+      const response = await Axios.post(
+        "http://localhost:8080/user/login",
+        data
+      );
+      if (response.data.token && !response.data.error) {
+        localStorage.setItem("token", response.data.token);
+        setLoggedIn(true);
+        history.push(`/users/${response.data.username}?path=/`)
+      }
     } catch (error) {
       console.log(error);
     }
@@ -101,7 +105,6 @@ export default function LoginModal() {
         </MDBModalDialog>
       </MDBModal>
       {/* /modal */}
-
     </>
   );
 }

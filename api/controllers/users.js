@@ -35,7 +35,7 @@ function login(req, res) {
         error: "",
         message: "login success",
         token: user.generateToken(),
-        // user: user,
+        username: user.userName,
       });
     } else {
       return res.status(401).json({ error: "true", message: "wrong password" });
@@ -106,20 +106,24 @@ function updateUser(req, res) {
 }
 
 function checkToken(req, res, next) {
-  let token = req.body.token || req.headers["x-access-token"];
-  var decode = jwt.verify(token, process.env.JWT_SECRET);
-  var decoded = jwt.decode(token, { complete: true });
-  if (decode) {
-    // return res.status(200).json({decode,decoded});
-    if (req.path === "/user/check-token") {
-      return res
-        .status(200)
-        .json({ error: "", message: "token is valid", decode });
-    } else {
-      req.decoded = decoded;
-      next();
+  try {
+    let token = req.body.token ;
+    console.log(token);
+    var decode = jwt.verify(token, process.env.JWT_SECRET);
+    var decoded = jwt.decode(token, { complete: true });
+    console.log(decoded);
+    if (decode) {
+      if (req.path === "/user/check-token") {
+        return res
+          .status(200)
+          .json({ error: "", message: "token is valid", decode });
+      } else {
+        req.decoded = decoded;
+        next();
+      }
     }
-  } else {
+  } catch (e) {
+    console.log(e);
     return res.status(401).json({ error: "true", message: "token is invalid" });
   }
 }
@@ -132,7 +136,11 @@ function checkPrivileges(req, res, next) {
         .status(403)
         .json({ error: "true", message: err || "user not found" });
     }
-    if (user.privileges === "admin") {
+    if (req.path === "/user/check-privileges") {
+      return res
+        .status(200)
+        .json({ error: "", message: "Admin", decode });
+    } else if (user.privileges === "admin"){
       next();
     } else {
       return res.status(403).json({ error: "true", message: "Forbidden" });

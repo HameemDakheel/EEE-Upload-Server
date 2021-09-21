@@ -6,7 +6,7 @@ function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 
-export default function Breadcrumb() {
+export default function Breadcrumb({username}) {
   const query = useQuery();
   const [arrItems, setArrItems] = useState([]);
 
@@ -37,10 +37,19 @@ export default function Breadcrumb() {
               <li className="breadcrumb-item">
                 <Link to="/?path=/">Home</Link>
               </li>
+              {username ? (
+                <li className="breadcrumb-item">
+                  <Link to={`/users/h?path=/`}>{username}</Link>
+                </li>
+              ) : (
+                ""
+              )}
               {arrItems.map((value, index) => {
                 return (
                   <li key={index} className="breadcrumb-item">
-                    <Link to={`/?path=${value}/`}>{Path.basename(value+"/")}</Link>
+                    <Link to={`/?path=${value}/`}>
+                      {Path.basename(value + "/")}
+                    </Link>
                   </li>
                 );
               })}

@@ -1,7 +1,51 @@
-import React from 'react';
+import React from "react";
+import {
+  MDBBtn,
+  MDBDropdown,
+  MDBDropdownMenu,
+  MDBDropdownToggle,
+} from "mdb-react-ui-kit";
+import { Link,useHistory } from "react-router-dom";
 import LoginModal from "./modals/loginModal";
-export default function Navbar() {
-	return (
+export default function Navbar({ loggedIn, setLoggedIn,user }) {
+console.log(user);
+const history = useHistory()
+  function BtnGroup() {
+    const logOut = () => {
+      localStorage.removeItem("token");
+      setLoggedIn(false);
+      history.push("/")
+    };
+    return (
+      <>
+        <MDBDropdown className="mx-2">
+          <MDBDropdownToggle>Go To</MDBDropdownToggle>
+          <MDBDropdownMenu className="mt-1">
+            <li>
+              <Link className="dropdown-item" to="/">
+                Home Page
+              </Link>
+            </li>
+            <li>
+              <Link className="dropdown-item" to={`/users/${user.username}?path=/`}>
+                Upload Page
+              </Link>
+            </li>
+            <li>
+              <Link className="dropdown-item" to="#">
+                Admin Panel
+              </Link>
+            </li>
+          </MDBDropdownMenu>
+        </MDBDropdown>
+        <MDBBtn className="mx-2" color="danger" onClick={logOut}>
+          Logout
+        </MDBBtn>
+      </>
+    );
+  }
+
+  return (
     <>
       {/* Navbar */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light rounded-5 mt-4">
@@ -23,7 +67,7 @@ export default function Navbar() {
             </a>
             <ul className="navbar-nav me-auto mb-md-2 mb-lg-0 me">
               <li className="nav-item">
-                <a className="nav-link fs-4 text-break">
+                <a href="/" className="nav-link fs-4 text-break">
                   Electrical Engineering Digital Library
                 </a>
               </li>
@@ -51,7 +95,7 @@ export default function Navbar() {
                 Dark Theme
               </label>
             </div>
-                <LoginModal />
+            {loggedIn ? <BtnGroup /> : <LoginModal setLoggedIn={setLoggedIn}/>}
           </div>
         </div>
       </nav>

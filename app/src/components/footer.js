@@ -22,9 +22,10 @@ export default function Footer() {
             {/*Grid column*/}
             <div className="col-lg-6 text-center">
               <p className="m-0">
-                This project Designed &amp; made by
-                <a className href>
-                  Hameem Dakheel
+                This project is an open source if the
+                <a href="https://github.com/HameemDakheel/EEE-Upload-Server/">
+                  {" "}
+                  Source Code{" "}
                 </a>
               </p>
             </div>
@@ -73,8 +74,11 @@ export default function Footer() {
           data-wow-delay="0.3s"
         >
           <div className="container-fluid">
-            This website is licensed under MIT Licenses to see
-            <a href> Source Code </a>
+            <i className="far fa-copyright" />
+            &nbsp;{`${new Date().getFullYear()}`} Copyright: Designed By&nbsp;
+            <a className href="https://hameemdakheel.herokuapp.com/">
+              Hameem Dakheel
+            </a>
           </div>
         </div>
         {/*/Copyright*/}

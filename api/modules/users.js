@@ -47,8 +47,8 @@ User.methods.checkPassword = function (password) {
 };
 
 User.methods.generateToken = function (){
-  let token = jwt.sign({id: this._id ,username:this.userName}, process.env.JWT_SECRET, {
-    expiresIn:'3h'
+  let token = jwt.sign({id: this._id ,username:this.userName, privileges:this.privileges}, process.env.JWT_SECRET, {
+    expiresIn: '24h'
   });
   console.log(token);
   return token

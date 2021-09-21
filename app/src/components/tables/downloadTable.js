@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link,useLocation} from "react-router-dom";
 import { MDBInput } from "mdb-react-ui-kit";
 import Axios from "axios";
 import Path from "path";
@@ -8,6 +8,7 @@ import Loading from '../loading'
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
+
 export default function Table() {
   const query = useQuery();
   const [dirTree, setDirTree] = useState([]);

@@ -1,21 +1,17 @@
-import axios from 'axios'
+import axios from "axios";
 
-export default function Token(action){
-	const token = localStorage.getItem("token");
-	if (token) {
-		return checkToken(token);
-	}else{
-		return false;
-	}
+export default async function checkToken() {
+  try {
+    const token = localStorage.getItem("token");
 
-}
-
-const checkToken = async (token) =>{
-	const res = await axios.post("http://localhost:8080/check-token",{token});
-	console.log(res.data);
-	if (!res.data.error) {
-		return true;
-	}else{
-		return false
-	}
+    const res = await axios.post("http://localhost:8080/user/check-token", {
+      token,
+    });
+    if (!res.data.error && res.data.decode) {
+      return { isValid: true, user: res.data.decode };
+    }
+  } catch (e) {
+    console.log(e);
+    return { isValid: false, user: {} };
+  }
 }
