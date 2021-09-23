@@ -7,7 +7,6 @@ export default function Footer() {
       <footer
         className="
     page-footer
-    pt-md-3 pt-2
     mt-2
     text-center text-md-left
     bg-white
@@ -16,22 +15,22 @@ export default function Footer() {
   "
       >
         {/*Footer Links*/}
-        <div className="container wow fadeIn" data-wow-delay="0.3s">
-          {/*First row*/}
-          <div className="row mt-1 mb-1">
-            {/*Grid column*/}
-            <div className="col-lg-6 text-center">
-              <p className="m-0">
-                This project is an open source if the
-                <a href="https://github.com/HameemDakheel/EEE-Upload-Server/">
-                  {" "}
-                  Source Code{" "}
-                </a>
-              </p>
+
+        {/*Copyright*/}
+        <div
+          className="footer-copyright text-center mb-1  py-4 wow fadeIn"
+          data-wow-delay="0.3s"
+        >
+          <div className="row container-fluid lobster-font">
+            <div className="col">
+              <i className="far fa-copyright" />
+              &nbsp;{`${new Date().getFullYear()}`} Copyright: Designed By&nbsp;
+              <a className href="https://hameemdakheel.herokuapp.com/">
+                Hameem Dakheel
+              </a>
             </div>
-            {/*Grid column*/}
-            <div className="col-lg-6">
-              <ul className="list-unstyled d-flex justify-content-center mb-0">
+            <div className="col">
+              <ul className="list-unstyled d-flex justify-content-center mb-0 ">
                 <li>
                   <p className="ps-2 ms-2 my-auto">Find me on:</p>
                 </li>
@@ -61,24 +60,7 @@ export default function Footer() {
                   </a>
                 </li>
               </ul>
-            </div>
-            {/*/Grid column*/}
-          </div>
-          {/*/First row*/}
-        </div>
-        {/*/Footer Links*/}
-        <hr className="border-5 w-75 my-md-3 my-2 mx-auto" />
-        {/*Copyright*/}
-        <div
-          className="footer-copyright text-center mb-1 pb-md-3 pb-2 wow fadeIn"
-          data-wow-delay="0.3s"
-        >
-          <div className="container-fluid">
-            <i className="far fa-copyright" />
-            &nbsp;{`${new Date().getFullYear()}`} Copyright: Designed By&nbsp;
-            <a className href="https://hameemdakheel.herokuapp.com/">
-              Hameem Dakheel
-            </a>
+            </div>{" "}
           </div>
         </div>
         {/*/Copyright*/}

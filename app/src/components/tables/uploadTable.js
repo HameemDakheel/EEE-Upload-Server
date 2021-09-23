@@ -1,30 +1,31 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Link, useLocation} from "react-router-dom";
+import React, { useState, useEffect, } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { MDBInput } from "mdb-react-ui-kit";
 import Axios from "axios";
 import Path from "path";
-import Loading from '../loading'
-import UploadModal from '../modals/uploadModals'
+import { useAlert } from "react-alert";
+import Loading from "../loading";
+import UploadModal from "../modals/uploadModals";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 
-export default function UploadTable({username}) {
+export default function UploadTable({ username }) {
   const query = useQuery();
   const [dirTree, setDirTree] = useState([]);
   const [loading, setLoading] = useState("true");
   const [path, setPath] = useState(
-    query.get("path") ? `/Compressed${query.get("path")}` : "/Compressed"
+    query.get("path") ? `/${username}/${query.get("path")}` : "/"+username
   );
+  const Alert = useAlert();
   console.log(path, "pathhhhh", query.get("path"));
-
 
   useEffect(() => {
     setPath(
-      query.get("path") ? `/Compressed${query.get("path")}` : "/Compressed"
+      query.get("path") ? `/${username}/${query.get("path")}` : "/"+username
     );
-  }, [query]);
+  }, [query,username]);
 
   useEffect(() => {
     const makeRequest = async () => {
@@ -42,7 +43,7 @@ export default function UploadTable({username}) {
     };
     makeRequest();
   }, [path]);
-   const search = () => {
+  const search = () => {
     // Declare variables
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("search-input");
@@ -61,6 +62,28 @@ export default function UploadTable({username}) {
           tr[i].style.display = "none";
         }
       }
+    }
+  };
+
+  const handelDelete = async (filename) => {
+    try {
+      const data = {
+        token: localStorage.getItem("token"),
+        filename,
+        path: "/",
+      };
+      console.log(data);
+      const response = await Axios.post("http://localhost:8080/delete-file/", {
+        token: localStorage.getItem("token"),
+        filename:filename,
+        path: "/",
+      });
+      if (!response.data.error) {
+        Alert.success(filename + " has been deleted successfully.");
+        setDirTree([]);
+      }
+    } catch (error) {
+      Alert.error(filename + " has not been deleted");
     }
   };
 
@@ -95,7 +118,7 @@ export default function UploadTable({username}) {
               mt-2 mt-sm-0
             "
             >
-              <UploadModal query= {query} username={username}/>
+              <UploadModal query={query} username={username} />
             </div>
           </h5>
         </div>
@@ -120,7 +143,7 @@ export default function UploadTable({username}) {
                       Date
                     </th>
                     <th scope="col" colSpan={1}>
-                       Actions
+                      Actions
                     </th>
                   </tr>
                 </thead>
@@ -177,14 +200,14 @@ export default function UploadTable({username}) {
                           <button
                             type="button"
                             className="btn mx-2 btn-danger btn-sm px-2"
+                            onClick={() => {
+                              if (Path.extname(content.name)) {
+                                return handelDelete(content.name);
+                              }
+                              Alert.error("You can't delete a folder'");
+                            }}
                           >
                             <i className="fas fa-lg fa-trash-alt" />
-                          </button>
-                          <button
-                            type="button"
-                            className="btn mx-2 btn-success btn-sm mt-2 mt-md-0 px-2"
-                          >
-                            <i className="fas fa-lg fa-edit" />
                           </button>
                         </td>
                       </tr>
@@ -197,6 +220,5 @@ export default function UploadTable({username}) {
         </div>
       </div>
     </section>
-
   );
 }

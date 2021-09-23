@@ -5,7 +5,9 @@ const http = require("http");
 const debug = require("debug");
 const cors = require("cors");
 const logger = require("morgan");
-const multer = require('multer');
+const path = require("path");
+const cookieParser = require("cookie-parser");
+
 
 require("./db")
 
@@ -13,10 +15,15 @@ const router = require("./router")
 const port = normalizePort(process.env.PORT || "8080");
 const app = express();
 
+
+app.set("views", path.join(__dirname, "build"));
+
 app.use(cors());
 app.use(logger("dev"));
-app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, "build")));
 
 app.use("/", router);
 

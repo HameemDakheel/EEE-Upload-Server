@@ -5,10 +5,11 @@ const path = require("path");
 const fs = require("fs");
 
 function Upload(req, res) {
-  let username = req.decoded.username;
-  let pathname = req.query.path
+  let username = req.decoded.payload.username;
+  let pathname = req.query.path|| "/"
+  console.log(req.decoded, pathname);
   let upload_path = path.join(process.env.DEFAULT_PATH,username,pathname);
-
+  let message;
   try {
     if (!fs.existsSync(upload_path)) {
       fs.mkdirSync(upload_path, {
@@ -33,7 +34,7 @@ function Upload(req, res) {
       file.path = path.join(upload_path, file.name);
     })
     .on("file", async (fileName, file) => {
-      console.log("uploading " + file.name, filename ,"to"+file.path);
+      console.log("uploading " + file.name, fileName ,"to"+file.path);
     })
     .on("end", () => {
       console.log("======> upload done");

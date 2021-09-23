@@ -42,7 +42,9 @@ export default function LoginModal({ setLoggedIn }) {
 
   return (
     <>
-      <MDBBtn onClick={toggleShow}>Login</MDBBtn>
+      <MDBBtn className="me-3 btn-lg " onClick={toggleShow}>
+        Sign in
+      </MDBBtn>
       {/* modal */}
       <MDBModal
         show={loginModal}
@@ -83,6 +85,7 @@ export default function LoginModal({ setLoggedIn }) {
                     <div className="row mb-4">
                       <div className="col">
                         {/* Simple link */}
+                        {/* eslint-disable-next-line */}
                         <a
                           href="#"
                           onClick={() =>

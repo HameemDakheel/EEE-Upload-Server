@@ -3,17 +3,22 @@ const User = mongoose.model("User");
 const jwt = require("jsonwebtoken");
 
 function getUsers(req, res) {
+  const message= "";
   User.find({}, (err, users) => {
+    var data= [];
     users.map((user) => {
       if (user.privileges === "admin") {
         return;
       } else {
-        return user;
+        data.push({ username: user.userName, path: user.defaultPath });
+        return;
       }
     });
-    if (err || users.length)
-      return res.status(400).json({ error: "true", message: err.message });
-    return res.status(200).json({ users });
+    if (err || users.length<=0){
+      return res.status(400).json({ error: "true", message: err });
+    }
+
+    return res.status(200).json({ data });
   });
 }
 
@@ -45,6 +50,12 @@ function login(req, res) {
 
 function register(req, res) {
   const { username, password, path } = req.body;
+  console.log(req.body);
+  User.findOne({ userName: username }, function (err, user) {
+    if (err || user) {
+      return res.status(403).json({ error: "true", message:"user already exists" });
+    }
+  })
   if (!username || !password || !path)
     return res
       .status(401)
@@ -57,9 +68,9 @@ function register(req, res) {
     let token = user.generateToken();
     user.save();
     console.log("user created :", user);
-    res.status(200).json({ user, token });
+    res.status(200).json({ error: "", message: "user created" });
   } catch (e) {
-    console.error(e);
+    console.error(e.message);
     res.status(400).json({ error: "true", message: e.message });
   }
 }
@@ -80,13 +91,14 @@ function deleteUser(req, res) {
 }
 
 function updateUser(req, res) {
-  const { username, password, path } = req.body;
-  if (!username || !password || !path) {
+  const { username, path } = req.body;
+  if (!username || !path) {
     return res
-      .status(401)
-      .json({ error: "true", message: "all fields are required" });
+    .status(401)
+    .json({ error: "true", message: "all fields are required" });
   }
-  User.findOneAndUpdate({ userName: username }, (err, user) => {
+  User.findOne({ userName: username }, (err, user) => {
+    console.log("here is user",username,path);
     if (err || !user) {
       return res
         .status(400)
@@ -94,8 +106,7 @@ function updateUser(req, res) {
     } else {
       try {
         user.userName = username;
-        user.setPassword(password);
-        user.path = path;
+        user.defaultPath = path;
         user.save();
         return res.status(200).json({ message: "user updated", user });
       } catch (e) {
@@ -107,8 +118,8 @@ function updateUser(req, res) {
 
 function checkToken(req, res, next) {
   try {
-    let token = req.body.token ;
-    console.log(token);
+    let token = req.body.token? req.body.token : req.headers["authorization"].split(" ")[1];
+    console.log( token);
     var decode = jwt.verify(token, process.env.JWT_SECRET);
     var decoded = jwt.decode(token, { complete: true });
     console.log(decoded);
@@ -116,36 +127,27 @@ function checkToken(req, res, next) {
       if (req.path === "/user/check-token") {
         return res
           .status(200)
-          .json({ error: "", message: "token is valid", decode });
+          .json({ error: "", message: "token is valid", decode:{username: decode.username, privileges:decode.privileges} });
       } else {
         req.decoded = decoded;
+        console.log("yep");
         next();
       }
     }
   } catch (e) {
-    console.log(e);
+    console.log(e.message);
     return res.status(401).json({ error: "true", message: "token is invalid" });
   }
 }
 
 function checkPrivileges(req, res, next) {
-  const decoded = req.decoded;
-  User.findOne({ userName: decoded.username }, (err, user) => {
-    if (err || !user) {
-      return res
-        .status(403)
-        .json({ error: "true", message: err || "user not found" });
-    }
-    if (req.path === "/user/check-privileges") {
-      return res
-        .status(200)
-        .json({ error: "", message: "Admin", decode });
-    } else if (user.privileges === "admin"){
+  const user = req.decoded.payload;
+  if (user.privileges === "admin"){
+    console.log("an other admin");
       next();
     } else {
       return res.status(403).json({ error: "true", message: "Forbidden" });
     }
-  });
 }
 
 module.exports = {

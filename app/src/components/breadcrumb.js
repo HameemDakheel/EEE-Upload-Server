@@ -9,6 +9,7 @@ function useQuery() {
 export default function Breadcrumb({username}) {
   const query = useQuery();
   const [arrItems, setArrItems] = useState([]);
+  const path = query.get("path");
 
   const getListItems = () => {
     const tempArr = [];
@@ -25,7 +26,7 @@ export default function Breadcrumb({username}) {
       setArrItems(tempArr);
     }
   };
-  useEffect(getListItems, [query.get("path")]);
+  useEffect(getListItems, [path,query]);
 
   return (
     <>

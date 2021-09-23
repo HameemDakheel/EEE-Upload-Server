@@ -12,69 +12,69 @@ import {
   MDBTabsPane,
   MDBProgress,
   MDBProgressBar,
-  MDBInput
+  MDBInput,
 } from "mdb-react-ui-kit";
-import $ from "jquery";
+import { useAlert } from "react-alert";
 
-export default function UploadModal({query, username}) {
+export default function UploadModal({ query, username }) {
   const [uploadModal, setUploadModal] = useState(false);
-  const [justifyActive, setJustifyActive] = useState("tab1");
+  const [ActiveTab, setActiveTab] = useState("tab1");
+  const [present, setPresent] = useState("0");
+  const [Files, setFiles] = useState([])
+  const Alert = useAlert();
 
-  const handleJustifyClick = (value) => {
-    if (value === justifyActive) {
+  const handleTabClick = (value) => {
+    if (value === ActiveTab) {
       return;
     }
 
-    setJustifyActive(value);
+    setActiveTab(value);
   };
 
   const toggleShow = () => setUploadModal(!uploadModal);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const form = e.target ;
+    const form = e.target;
     var formData = new FormData();
-    formData.append("file",form[0].files[0])
 
+    for (let j = 0; j < Files.length; j++) {
+      formData.append(`file${j}`, Files[j]);
+    }
 
-      // for (let i = 0; i < form.elements.length; i++) {
-      //   if (form.elements[i].type === "file") {
-      //     for(let j = 0; j < form.elements[i].files.length; j++) {
-      //       formdata.append(`file${j}`, form.elements[i].files[j]);
-      //     }
-      //   } else {
-      //     formdata.append(form.elements[i].name, form.elements[i].value);
-      //   }
-      // }
+    var url = `http://localhost:8080/upload/${username}?path=${
+      query.get("path") || "/"
+    }`;
+    console.log(Files.length, form);
+    var ajax = new XMLHttpRequest();
+    ajax.upload.addEventListener("progress", progressHandler, false);
+    ajax.addEventListener("load", completeHandler, false);
+    ajax.addEventListener("error", errorHandler, false);
+    ajax.addEventListener("abort", abortHandler, false);
+    ajax.open("POST", url);
+    ajax.setRequestHeader(
+      "Authorization",
+      "Bearer " + localStorage.getItem("token")
+    );
+    ajax.send(formData);
 
-    var url = `/upload/${username}?path=${query.get('path')}}`
-    console.log(formData, form);
-    // var ajax = new XMLHttpRequest();
-    // ajax.upload.addEventListener("progress", progressHandler, false);
-    // ajax.addEventListener("load", completeHandler, false);
-    // ajax.addEventListener("error", errorHandler, false);
-    // ajax.addEventListener("abort", abortHandler, false);
-    // ajax.open("POST", url);
-    // ajax.send(formdata);
+    function progressHandler(event) {
+      setPresent(`${Math.round((event.loaded / event.total) * 100)}`);
+    }
 
-  function progressHandler(event) {
-    var percent = Math.round((event.loaded / event.total) * 100);
-    $(".progress-bar").css("width", percent + "%");
-  }
+    function completeHandler(event) {
+      setPresent("0");
+      Alert.success("Upload Complete");
+    }
 
-  function completeHandler(event) {
-    $(".progress-bar").css("width", 0 + "%");
-    alert("Upload Complete")
-  }
+    function errorHandler(event) {
+      Alert.error("Upload Failed");
+    }
 
-  function errorHandler(event) {
-    alert("Upload Failed");
-  }
-
-  function abortHandler(event) {
-    alert("Upload Aborted");
-  }
-  }
+    function abortHandler(event) {
+      Alert.info("Upload Aborted");
+    }
+  };
 
   return (
     <>
@@ -90,73 +90,97 @@ export default function UploadModal({query, username}) {
               <MDBTabs pills justify className="mb-3">
                 <MDBTabsItem>
                   <MDBTabsLink
-                    onClick={() => handleJustifyClick("tab1")}
-                    active={justifyActive === "tab1"}
+                    onClick={() => handleTabClick("tab1")}
+                    active={ActiveTab === "tab1"}
                   >
                     Single Upload
                   </MDBTabsLink>
                 </MDBTabsItem>
                 <MDBTabsItem>
                   <MDBTabsLink
-                    onClick={() => handleJustifyClick("tab2")}
-                    active={justifyActive === "tab2"}
+                    onClick={() => handleTabClick("tab2")}
+                    active={ActiveTab === "tab2"}
                   >
                     Multiple Uploads
                   </MDBTabsLink>
                 </MDBTabsItem>
               </MDBTabs>
               <MDBTabsContent>
-                <MDBTabsPane show={justifyActive === "tab1"}>
+                <MDBTabsPane show={ActiveTab === "tab1"}>
                   <form onSubmit={handleSubmit}>
-                  <p class="note note-danger">
-                    <strong>Please Make Sure Your in The Right Folder:</strong>{" "}
-                    {`Uploading path '/${username}${query.get("path")}'`}
-                  </p>
-
-                  <MDBInput block className="mt-3 " type="file" />
-                  <MDBProgress height="20" className="mt-3 rounded-2">
-                    <MDBProgressBar
-                      striped
-                      animated
-                      width="25"
-                      valuemin={0}
-                      valuemax={100}
-                    >
-                      25%
-                    </MDBProgressBar>
-                  </MDBProgress>
-                  <hr />
-                  <MDBBtn type="submit" block className="mt-3 " color="primary">
-                    Upload
-                  </MDBBtn>
-                  </form>
-                </MDBTabsPane>
-                <MDBTabsPane show={justifyActive === "tab2"}>
-                  <form onsubmit={handleSubmit}>
                     <p class="note note-danger">
-                      <strong>
-                        Please Make Sure Your in The Right Folder:
-                      </strong>{" "}
-                      {`Uploading path '/${username}${query.get("path")}'`}
+                      <strong>NOTE: </strong>{" "}
+                      {`Please Make Sure Your are in The Right Folder: '/${username}${
+                        query.get("path") || "/"
+                      }'`}
                     </p>
+
                     <MDBInput
                       block
                       className="mt-3 "
                       type="file"
-                      multiple={true}
+                      required
+                      onChange={(e) => {
+                        setFiles(e.target.files);
+                      }}
                     />
                     <MDBProgress height="20" className="mt-3 rounded-2">
                       <MDBProgressBar
                         striped
                         animated
+                        width={present}
                         valuemin={0}
                         valuemax={100}
                       >
-
+                        {present === "0" ? "" : present + " %"}
                       </MDBProgressBar>
                     </MDBProgress>
                     <hr />
-                    <MDBBtn type="submit" block className="mt-1"color="primary">
+                    <MDBBtn
+                      type="submit"
+                      className="mt-3  btn-block"
+                      color="primary"
+                    >
+                      Upload
+                    </MDBBtn>
+                  </form>
+                </MDBTabsPane>
+                <MDBTabsPane show={ActiveTab === "tab2"}>
+                  <form onSubmit={handleSubmit}>
+                    <p class="note note-danger">
+                      <strong>NOTE: </strong>{" "}
+                      {`Please Make Sure Your are in The Right Folder: '/${username}${
+                        query.get("path") || "/"
+                      }'`}
+                    </p>
+                    <MDBInput
+
+                      className="mt-3 "
+                      type="file"
+                      multiple={true}
+                      required
+                      onChange={(e) => {
+                        setFiles(e.target.files);
+                      }}
+                    />
+                    <MDBProgress height="20" className="mt-3 rounded-2">
+                      <MDBProgressBar
+                        striped
+                        animated
+                        width={present}
+                        valuemin={0}
+                        valuemax={100}
+                      >
+                        {present === "0" ? "" : present + " %"}
+                      </MDBProgressBar>
+                    </MDBProgress>
+                    <hr />
+                    <MDBBtn
+                      type="submit"
+                      block
+                      className="mt-1"
+                      color="primary"
+                    >
                       Upload
                     </MDBBtn>
                   </form>

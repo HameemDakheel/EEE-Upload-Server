@@ -80,3 +80,17 @@ tbody tr:last-of-type th, tbody tr:last-of-type td {
 }
 
 
+.alert {
+	pointer-events: auto !important;
+	/* position: fixed; */
+
+	top:3rem !important;
+}
+.lobster-font{
+	font-family: Lobster;
+	font-style: normal;
+	font-size: 1.4rem;
+}
+.big-font {
+	font-size: 11rem;
+}

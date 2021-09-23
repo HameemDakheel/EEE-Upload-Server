@@ -3,15 +3,21 @@ const userController = require("./controllers/users");
 const downloadController = require("./controllers/download");
 const uploadController = require("./controllers/upload");
 
-router.get("/dir-tree",downloadController.getDefaultTree);
+router.get('/', (req, res) =>{ res.render('index'); });
+router.get("/dir-tree", downloadController.getDefaultTree);
 router.get("/download", downloadController.downloadOneFile);
-router.get("/download-all",downloadController.downloadFiles);
+router.get("/download-all", downloadController.downloadFiles);
 router.post("/user/check-token", userController.checkToken);
-router.post("/upload",userController.checkToken , uploadController.Upload)
 router.post(
-  "/user/check-privileges",
+  "/upload/:username",
   userController.checkToken,
-  userController.checkPrivileges);
+  uploadController.Upload
+);
+router.post(
+  "/delete-file",
+  userController.checkToken,
+  downloadController.deleteFile
+);
 router.post("/user/login", userController.login);
 router.post(
   "/user/register",
