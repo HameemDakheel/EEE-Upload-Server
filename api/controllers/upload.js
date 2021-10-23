@@ -3,11 +3,11 @@ const User = mongoose.model("User");
 const formidable = require("formidable");
 const path = require("path");
 const fs = require("fs");
+const logger = require('../config/logger');
 
 function Upload(req, res) {
   let username = req.decoded.payload.username;
-  let pathname = req.query.path|| "/"
-  console.log(req.decoded, pathname);
+  let pathname = req.query.path|| "/";
   let upload_path = path.join(process.env.DEFAULT_PATH,username,pathname);
   let message;
   try {
@@ -17,11 +17,9 @@ function Upload(req, res) {
       });
     }
   } catch (error) {
-    console.log(error);
+    logger.error(error);
   }
 
-  console.log(upload_path);
-  console.log(fs.existsSync(upload_path));
   const form = new formidable({
     multiples: true,
     uploadDir: upload_path,
@@ -33,15 +31,15 @@ function Upload(req, res) {
     .on("fileBegin", (name, file) => {
       file.path = path.join(upload_path, file.name);
     })
-    .on("file", async (fileName, file) => {
-      console.log("uploading " + file.name, fileName ,"to"+file.path);
+    .on("file",(fileName, file) => {
+      logger.info(`${username} is uploading ${fileName} to ${file.path}`);
     })
     .on("end", () => {
-      console.log("======> upload done");
+      logger.info(`${username} is finish uploading`)
       message = "Upload Complete";
     })
 	.on("error", (error) => {
-		console.log(error);
+		logger.error(error);
 	})
   form.parse(req);
   res.status(200).send(message);

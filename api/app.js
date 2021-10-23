@@ -4,10 +4,10 @@ const express = require("express");
 const http = require("http");
 const debug = require("debug");
 const cors = require("cors");
-const logger = require("morgan");
+const morgan = require("morgan");
 const path = require("path");
 const cookieParser = require("cookie-parser");
-
+const logger = require('./config/logger')
 
 require("./db")
 
@@ -19,7 +19,7 @@ const app = express();
 app.set("views", path.join(__dirname, "build"));
 
 app.use(cors());
-app.use(logger("dev"));
+app.use(morgan("common"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -69,11 +69,11 @@ function onError(error) {
   // handle specific listen errors with friendly messages
   switch (error.code) {
     case 'EACCES':
-      console.error(bind + ' requires elevated privileges');
+      logger.error(bind + " requires elevated privileges");
       process.exit(1);
       break;
     case 'EADDRINUSE':
-      console.error(bind + ' is already in use');
+      logger.error(bind + " is already in use");
       process.exit(1);
       break;
     default:
@@ -91,4 +91,5 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
+  logger.info(`listening on port ${port}`)
 }

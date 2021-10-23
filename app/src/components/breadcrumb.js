@@ -31,7 +31,7 @@ export default function Breadcrumb({username}) {
   return (
     <>
       {/* breadcrumb */}
-      <nav className="navbar navbar-expand-lg navbar-light bg-light rounded-5 mt-4">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light rounded-5 mt-4 shadow-5">
         <div className="container-fluid">
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb">

@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const logger = require('./config/logger')
 const connectionString = process.env.CONNECTION_STRING || "mongodb://localhost:27017/";
 
 require("./modules/users")
@@ -10,20 +11,20 @@ if (process.env.APP_ENV === "production") {
 mongoose.connect(connectionString, { useNewUrlParser: true ,useUnifiedTopology:true,useCreateIndex:true});
 
 mongoose.connection.on("connected", () =>
-  console.log(`connected to mongo database on ${connectionString}`)
+  logger.info(`connected to mongo database`)
 );
 
 
 mongoose.connection.on("error", (err) => {
-  console.log("mongoose connection error", err);
+  logger.error("mongoose connection error"+ err);
 });
 mongoose.connection.on("disconnected", () => {
-  console.log("mongoose disconnected");
+  logger.warn("mongoose disconnected");
 });
 
 const gracefulShutdown = (msg, callback) => {
   mongoose.connection.close(() => {
-    console.log("mongoose disconnected through", msg);
+    logger.warn("mongoose disconnected through"+ msg);
     callback;
   });
 };

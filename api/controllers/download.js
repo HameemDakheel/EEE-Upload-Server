@@ -4,6 +4,7 @@ const extname = Path.extname;
 const archiver = require("archiver");
 const defaultPath = process.env.DEFAULT_PATH;
 const trashPath = process.env.TRASH_PATH;
+const logger =require('../config/logger');
 
 function getDefaultTree(req, res) {
   var dirPath = req.query.path || "/";
@@ -21,7 +22,7 @@ function getDefaultTree(req, res) {
       });
       return res.status(200).json(arr);
     } catch (e) {
-      console.error(e);
+      logger.error(e);
       return res.status(500).json({ error: "true", message: e.message });
     }
   }
@@ -32,7 +33,6 @@ function getDefaultTree(req, res) {
 
 function downloadFiles(req, res) {
   var data = JSON.parse(req.query.data);
-  console.log(JSON.parse(req.query.data));
   const zip = archiver("zip");
   res.status(200).set("Content-Type", "application/zip");
   res.set(
@@ -49,11 +49,13 @@ function downloadFiles(req, res) {
     } else {
       zip.file(Path.join(path, name), { name });
     }
-    console.log(name, path);
   }
   zip.finalize();
+  zip.on('finish',()=>{
+        logger.verbose(`${extname(path)} have been ziped and downloaded `);
+  })
   zip.on("error", function (err) {
-    console.error(err);
+    logger.error(err);
     res.end();
   });
 }
@@ -61,6 +63,9 @@ function downloadFiles(req, res) {
 function downloadOneFile(req, res) {
   var isFile = fs.statSync(Path.join(defaultPath, req.query.file)).isFile();
   if (isFile) {
+    logger.verbose(
+      `someone had just download ${req.query.file}`
+    );
     return res.status(200).download(Path.join(defaultPath, req.query.file));
   }
   return res
@@ -80,24 +85,24 @@ function deleteFile(req, res) {
         });
       }
     } catch (error) {
-      console.log(error);
+      logger.error(error);
     }
   try {
     var isFile = fs.statSync(oldPath).isFile();
     if (isFile) {
       fs.rename(oldPath, Path.join(newPath, filename),(err) => {
         if (err) {
-          console.error(err);
+          logger.error(err);
           return res.status(500).json({error: "true", message: "Delete failed"});
         }
-        console.log(filename,"deleted successfully");
+        logger.warn(`${username} just deleted ${filename} successfully`);
           return res
             .status(200)
             .json({ error: "", message: "Delete success" });
       });
     }
   } catch (error) {
-    console.error(error);
+    logger.error(error);
     return res.status(500).json({ error: "true", message: "Delete failed" });
   }
 }

@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const User = mongoose.model("User");
 const jwt = require("jsonwebtoken");
+const logger = require("../config/logger")
 
 function getUsers(req, res) {
   const message= "";
@@ -23,7 +24,6 @@ function getUsers(req, res) {
 }
 
 function login(req, res) {
-  console.log(req.body);
   const { username, password } = req.body;
   if (!username || !password) {
     return res
@@ -36,6 +36,7 @@ function login(req, res) {
         .status(401)
         .json({ error: "true", message: err || "user does not exist" });
     } else if (user.checkPassword(password)) {
+      logger.info(`${username} logged in`);
       return res.status(200).json({
         error: "",
         message: "login success",
@@ -50,7 +51,6 @@ function login(req, res) {
 
 function register(req, res) {
   const { username, password, path } = req.body;
-  console.log(req.body);
   User.findOne({ userName: username }, function (err, user) {
     if (err || user) {
       return res.status(403).json({ error: "true", message:"user already exists" });
@@ -65,12 +65,11 @@ function register(req, res) {
     user.userName = username;
     user.setPassword(password);
     user.defaultPath = path;
-    let token = user.generateToken();
     user.save();
-    console.log("user created :", user);
+    logger.info(`${req.decode.username} add new user ${username}`);
     res.status(200).json({ error: "", message: "user created" });
   } catch (e) {
-    console.error(e.message);
+    logger.error(e.message);
     res.status(400).json({ error: "true", message: e.message });
   }
 }
@@ -85,6 +84,7 @@ function deleteUser(req, res) {
     if (err) {
       return res.status(500).json({ error: "true", message: err });
     } else {
+      logger.warn(`${req.body.username} has been deleted by ${req.decoded.payload.username}`);
       return res.status(200).json({ error: "", message: "user deleted" });
     }
   });
@@ -98,7 +98,6 @@ function updateUser(req, res) {
     .json({ error: "true", message: "all fields are required" });
   }
   User.findOne({ userName: username }, (err, user) => {
-    console.log("here is user",username,path);
     if (err || !user) {
       return res
         .status(400)
@@ -108,8 +107,12 @@ function updateUser(req, res) {
         user.userName = username;
         user.defaultPath = path;
         user.save();
+        logger.warn(
+          `${req.body.username} has been updated by ${req.decoded.payload.username}`
+        );
         return res.status(200).json({ message: "user updated", user });
       } catch (e) {
+        logger.error(e)
         return res.status(500).json({ error: "true", message: e.message });
       }
     }
@@ -119,10 +122,8 @@ function updateUser(req, res) {
 function checkToken(req, res, next) {
   try {
     let token = req.body.token? req.body.token : req.headers["authorization"].split(" ")[1];
-    console.log( token);
     var decode = jwt.verify(token, process.env.JWT_SECRET);
     var decoded = jwt.decode(token, { complete: true });
-    console.log(decoded);
     if (decode) {
       if (req.path === "/user/check-token") {
         return res
@@ -130,12 +131,10 @@ function checkToken(req, res, next) {
           .json({ error: "", message: "token is valid", decode:{username: decode.username, privileges:decode.privileges} });
       } else {
         req.decoded = decoded;
-        console.log("yep");
         next();
       }
     }
   } catch (e) {
-    console.log(e.message);
     return res.status(401).json({ error: "true", message: "token is invalid" });
   }
 }
@@ -143,7 +142,6 @@ function checkToken(req, res, next) {
 function checkPrivileges(req, res, next) {
   const user = req.decoded.payload;
   if (user.privileges === "admin"){
-    console.log("an other admin");
       next();
     } else {
       return res.status(403).json({ error: "true", message: "Forbidden" });
