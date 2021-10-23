@@ -28,7 +28,7 @@ const logger = createLogger({
       level: "info",
       filename: `${appRoot}/logs/app.log`,
       maxsize: "52428800", //50 MB,
-      handleExceptions: true,
+      
     }),
   ],
 });

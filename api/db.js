@@ -16,7 +16,7 @@ mongoose.connection.on("connected", () =>
 
 
 mongoose.connection.on("error", (err) => {
-  logger.error("mongoose connection error"+ err);
+  logger.error("mongoose connection error "+ err);
 });
 mongoose.connection.on("disconnected", () => {
   logger.warn("mongoose disconnected");
@@ -24,7 +24,7 @@ mongoose.connection.on("disconnected", () => {
 
 const gracefulShutdown = (msg, callback) => {
   mongoose.connection.close(() => {
-    logger.warn("mongoose disconnected through"+ msg);
+    logger.warn("mongoose disconnected through "+ msg);
     callback;
   });
 };
