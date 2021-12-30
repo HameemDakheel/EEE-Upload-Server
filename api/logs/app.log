@@ -1,0 +1,15 @@
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2021-10-24 21:38:04"}
+{"level":"info","message":"listening on port 8080","timestamp":"2021-12-06 09:49:33"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2021-12-06 09:50:03"}
+{"level":"error","message":"mongoose connection error MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017","timestamp":"2021-12-06 09:50:03"}
+{"level":"info","message":"listening on port 8080","timestamp":"2021-12-06 09:55:18"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2021-12-06 09:55:48"}
+{"level":"error","message":"mongoose connection error MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017","timestamp":"2021-12-06 09:55:48"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2021-12-06 09:56:33"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2021-12-06 09:56:33"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2021-12-06 09:56:33"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2021-12-06 09:56:33"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2021-12-06 09:57:17"}
+{"level":"info","message":"listening on port 8080","timestamp":"2021-12-21 10:11:20"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2021-12-21 10:11:50"}
+{"level":"error","message":"mongoose connection error MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017","timestamp":"2021-12-21 10:11:50"}

@@ -8,11 +8,15 @@ import {
   MDBInput,
 } from "mdb-react-ui-kit";
 import Axios from "axios";
-import {useAlert} from "react-alert";
+import { useAlert } from "react-alert";
 export default function RegisterModal() {
   const [registerModal, setRegisterModal] = useState(false);
   const toggleShow = () => setRegisterModal(!registerModal);
-  const [formValue, setFormValue] = useState({ username: "", path: "", password: "" });
+  const [formValue, setFormValue] = useState({
+    username: "",
+    path: "",
+    password: "",
+  });
   const token = localStorage.getItem("token");
   const Alert = useAlert();
 
@@ -22,19 +26,19 @@ export default function RegisterModal() {
       username: formValue.username,
       password: formValue.password,
       path: formValue.path,
-	  token
+      token,
     };
     try {
       const response = await Axios.post(
-        "http://localhost:8080/user/register",
+        "http://192.168.0.10/user/register",
         data
       );
       if (!response.data.error) {
-		Alert.success("user has been registered")
+        Alert.success("user has been registered");
       }
     } catch (error) {
       console.log(error);
-	  Alert.error("Something went wrong");
+      Alert.error("Something went wrong");
     }
   };
 
@@ -49,50 +53,50 @@ export default function RegisterModal() {
       <MDBModal
         show={registerModal}
         getOpenState={(e) => setRegisterModal(e)}
-        tabIndex="-1"
+        tabIndex='-1'
       >
         <MDBModalDialog>
           <MDBModalContent>
             <MDBModalBody>
-              <div className="p-5">
-                <div className="text-center">
-                  <form onSubmit={handleSubmit} id="form1">
+              <div className='p-5'>
+                <div className='text-center'>
+                  <form onSubmit={handleSubmit} id='form1'>
                     {/* Email input */}
                     <MDBInput
-                      id="username"
-                      name="username"
-                      label="Username"
-                      type="text"
+                      id='username'
+                      name='username'
+                      label='Username'
+                      type='text'
                       required
-                      className="mb-4"
-                      validation="Looks good!"
+                      className='mb-4'
+                      validation='Looks good!'
                       value={formValue.username}
                       onChange={onChange}
                     />
                     {/* Password input */}
                     <MDBInput
-                      id="password"
-                      name="password"
-                      label="Password"
-                      type="password"
+                      id='password'
+                      name='password'
+                      label='Password'
+                      type='password'
                       required
-                      className="mb-4"
-                      validation="Looks good!"
+                      className='mb-4'
+                      validation='Looks good!'
                       value={formValue.password}
                       onChange={onChange}
                     />
                     <MDBInput
-                      label="Path"
-                      id="path"
-                      name="path"
-                      type="text"
-                      className="mb-4"
+                      label='Path'
+                      id='path'
+                      name='path'
+                      type='text'
+                      className='mb-4'
                       required
                       value={formValue.path}
                       onChange={onChange}
                     />
                     {/* Submit button */}
-                    <button type="submit" className="btn btn-primary btn-block">
+                    <button type='submit' className='btn btn-primary btn-block'>
                       Add User
                     </button>
                   </form>

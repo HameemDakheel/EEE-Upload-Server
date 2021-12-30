@@ -7,7 +7,7 @@ import UserPanel from "./components/userPanel"
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 
-import "./bootstrap.min.css";
+// import "./bootstrap.min.css";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "./style.css";
 
@@ -21,12 +21,12 @@ export default function App() {
   useEffect(() => {
   const checkToken = async () => {
     try {
-      const res = await axios.post("http://localhost:8080/user/check-token", {
+      const res = await axios.post("http://192.168.0.10/user/check-token", {
         token,
       });
       if (!res.data.error && res.data.decode) {
         setLoggedIn(true);
-        setUser(res.data.decode);
+        setUser(res.data.decode || {name: "admin"});
         return;
       }
     } catch (e) {
@@ -67,7 +67,7 @@ export default function App() {
                     <h1 className="display-1 h1 d-block big-font">404</h1>
                     <h1 className="h1 my-3">Opsss!!!</h1>
                   </div>
-                  <Link className="btn btn-outline-black btn-lg mb-5 shadow-5-soft" to="/">Go Back Home</Link>
+                  <Link className="btn btn-outline-black mb-5 shadow-5-soft" to="/">Go Back Home</Link>
                 </div>
               </div>
             </section>

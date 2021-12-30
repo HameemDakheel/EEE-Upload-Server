@@ -18,11 +18,11 @@ export default function Navbar({ loggedIn, setLoggedIn, user }) {
     };
     return (
       <>
-        <MDBDropdown className="mx-2">
-          <MDBDropdownToggle className="btn-lg ">Go To</MDBDropdownToggle>
-          <MDBDropdownMenu className="mt-1">
+        <MDBDropdown className='mx-2'>
+          <MDBDropdownToggle className=''>Go To</MDBDropdownToggle>
+          <MDBDropdownMenu className='mt-1'>
             <li>
-              <Link className="dropdown-item" to="/">
+              <Link className='dropdown-item' to='/'>
                 Home Page
               </Link>
             </li>
@@ -30,7 +30,7 @@ export default function Navbar({ loggedIn, setLoggedIn, user }) {
               <>
                 <li>
                   <Link
-                    className="dropdown-item"
+                    className='dropdown-item'
                     to={`/users/${user.username}?path=/`}
                   >
                     Upload Page
@@ -39,7 +39,7 @@ export default function Navbar({ loggedIn, setLoggedIn, user }) {
                 {user.privileges === "admin" ? (
                   <li>
                     <Link
-                      className="dropdown-item"
+                      className='dropdown-item'
                       to={"/admin-panel/" + user.username}
                     >
                       Admin Panel
@@ -54,7 +54,7 @@ export default function Navbar({ loggedIn, setLoggedIn, user }) {
             )}
           </MDBDropdownMenu>
         </MDBDropdown>
-        <MDBBtn className="mx-2 btn-lg" color="danger" onClick={logOut}>
+        <MDBBtn className='mx-2' color='danger' onClick={logOut}>
           Logout
         </MDBBtn>
       </>
@@ -64,39 +64,36 @@ export default function Navbar({ loggedIn, setLoggedIn, user }) {
   return (
     <>
       {/* Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-light bg-light rounded-5 mt-4">
+      <nav className='navbar navbar-expand-lg navbar-light bg-light rounded-5 mt-4'>
         {/* Container wrapper */}
-        <div className="container py-md-0">
-          <div className="d-flex mx-auto ms-lg-0">
+        <div className='container py-md-0'>
+          <div className='d-flex mx-auto ms-lg-0'>
             {/* Navbar brand */}
-            <Link
-              className="navbar-brand me-2 ms-md-auto"
-              to="/"
-            >
+            <Link className='navbar-brand me-2 ms-md-auto' to='/'>
               <img
-                src="/logo.png"
-                alt="logo"
-                loading="lazy"
+                src='/logo.png'
+                alt='logo'
+                loading='lazy'
                 style={{ marginTop: "-1px" }}
                 height={58}
               />
             </Link>
-            <ul className="navbar-nav me-auto mb-md-2 mb-lg-0 me">
-              <li className="nav-item">
-                <Link to="/" className="nav-link fs-2 text-break lobster-font ">
-                  Electrical Engineering Digital Library
+            <ul className='navbar-nav me-auto mb-md-2 mb-lg-0 me'>
+              <li className='nav-item'>
+                <Link to='/' className='nav-link fs-2 text-break lobster-font '>
+                  Electrical Engineering Electronic Library
                 </Link>
               </li>
             </ul>
           </div>
           {/* Left links */}
           <div
-            className="
+            className='
         d-flex
         align-items-center
         mx-auto mx-lg-0
         justify-content-center
-      "
+      '
           >
             {loggedIn ? <BtnGroup /> : <LoginModal setLoggedIn={setLoggedIn} />}
           </div>

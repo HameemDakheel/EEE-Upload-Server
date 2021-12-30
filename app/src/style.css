@@ -84,13 +84,35 @@ tbody tr:last-of-type th, tbody tr:last-of-type td {
 	pointer-events: auto !important;
 	/* position: fixed; */
 
-	top:3rem !important;
+	top: 3rem !important;
 }
-.lobster-font{
+
+.lobster-font {
 	font-family: Lobster;
 	font-style: normal;
 	font-size: 1.4rem;
 }
+
 .big-font {
 	font-size: 11rem;
+}
+
+@media (max-width:768px) {
+	.btn-lg {
+		padding: .625rem 1.5rem .5rem 1.5rem;
+		font-size: .75rem;
+		line-height: 1.5;
+	}
+}
+
+@media (min-width:405px) {
+	.px-s-4 {
+		padding-right: 1.5rem !important;
+		padding-left: 1.5rem !important;
+	}
+
+	.py-sm-2 {
+		padding-top: .5rem !important;
+		padding-bottom: .5rem !important;
+	}
 }

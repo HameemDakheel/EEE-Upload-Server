@@ -8,7 +8,7 @@ import {
 } from "mdb-react-ui-kit";
 import Axios from "axios";
 import { useAlert } from "react-alert";
-export default function UpdateModal({username, path}) {
+export default function UpdateModal({ username, path }) {
   const [updateModal, setUpdateModal] = useState(false);
   const toggleShow = () => setUpdateModal(!updateModal);
   const [formValue, setFormValue] = useState({
@@ -26,10 +26,7 @@ export default function UpdateModal({username, path}) {
       token,
     };
     try {
-      const response = await Axios.post(
-        "http://localhost:8080/user/edit",
-        data
-      );
+      const response = await Axios.post("http://192.168.0.10/user/edit", data);
       if (!response.data.error) {
         Alert.success("user has been updated");
       }
@@ -46,50 +43,50 @@ export default function UpdateModal({username, path}) {
   return (
     <>
       <button
-        type="button"
-        className="btn mx-2 btn-success btn-sm px-2 mt-md-0 mt-2"
+        type='button'
+        className='btn mx-2 btn-success btn-sm px-2 mt-md-0 mt-2'
         onClick={toggleShow}
       >
-        <i className="fas fa-lg fa-edit" />
+        <i className='fas fa-lg fa-edit' />
       </button>
       {/* modal */}
       <MDBModal
         show={updateModal}
         getOpenState={(e) => setUpdateModal(e)}
-        tabIndex="-1"
+        tabIndex='-1'
       >
         <MDBModalDialog>
           <MDBModalContent>
             <MDBModalBody>
-              <div className="p-5">
-                <div className="text-center">
-                  <form onSubmit={handleSubmit} id="form1">
+              <div className='p-5'>
+                <div className='text-center'>
+                  <form onSubmit={handleSubmit} id='form1'>
                     {/* Email input */}
                     <MDBInput
-                      id="username"
-                      name="username"
-                      label="Username"
-                      type="text"
+                      id='username'
+                      name='username'
+                      label='Username'
+                      type='text'
                       required
-                      className="mb-4"
-                      validation="Looks good!"
+                      className='mb-4'
+                      validation='Looks good!'
                       value={formValue.username}
                       onChange={onChange}
                     />
                     {/* Password input */}
 
                     <MDBInput
-                      label="Path"
-                      id="path"
-                      name="path"
-                      type="text"
-                      className="mb-4"
+                      label='Path'
+                      id='path'
+                      name='path'
+                      type='text'
+                      className='mb-4'
                       required
                       value={formValue.path}
                       onChange={onChange}
                     />
                     {/* Submit button */}
-                    <button type="submit" className="btn btn-primary btn-block">
+                    <button type='submit' className='btn btn-primary btn-block'>
                       Update User
                     </button>
                   </form>

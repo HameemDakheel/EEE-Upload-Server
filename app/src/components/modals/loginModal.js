@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import {
   MDBBtn,
   MDBModal,
@@ -22,14 +22,11 @@ export default function LoginModal({ setLoggedIn }) {
       password: e.target[1].value,
     };
     try {
-      const response = await Axios.post(
-        "http://localhost:8080/user/login",
-        data
-      );
+      const response = await Axios.post("http://192.168.0.10/user/login", data);
       if (response.data.token && !response.data.error) {
         localStorage.setItem("token", response.data.token);
         setLoggedIn(true);
-        history.push(`/users/${response.data.username}?path=/`)
+        history.push(`/users/${response.data.username}?path=/`);
       }
     } catch (error) {
       console.log(error);
@@ -42,52 +39,52 @@ export default function LoginModal({ setLoggedIn }) {
 
   return (
     <>
-      <MDBBtn className="me-3 btn-lg " onClick={toggleShow}>
+      <MDBBtn className='me-3 btn-lg' onClick={toggleShow}>
         Sign in
       </MDBBtn>
       {/* modal */}
       <MDBModal
         show={loginModal}
         getOpenState={(e) => setLoginModal(e)}
-        tabIndex="-1"
+        tabIndex='-1'
       >
         <MDBModalDialog>
           <MDBModalContent>
             <MDBModalBody>
-              <div className="p-5">
-                <div className="text-center">
-                  <h4 className="text-dark mb-4">Welcome Back!</h4>
-                  <form onSubmit={handleSubmit} id="form1">
+              <div className='p-5'>
+                <div className='text-center'>
+                  <h4 className='text-dark mb-4'>Welcome Back!</h4>
+                  <form onSubmit={handleSubmit} id='form1'>
                     {/* Email input */}
                     <MDBInput
-                      id="username"
-                      name="username"
-                      label="Username"
-                      type="text"
+                      id='username'
+                      name='username'
+                      label='Username'
+                      type='text'
                       required
-                      className="mb-4"
-                      validation="Looks good!"
+                      className='mb-4'
+                      validation='Looks good!'
                       value={formValue.username}
                       onChange={onChange}
                     />
                     {/* Password input */}
                     <MDBInput
-                      label="Password"
-                      id="Password"
-                      name="password"
-                      type="password"
-                      className="mb-4"
+                      label='Password'
+                      id='Password'
+                      name='password'
+                      type='password'
+                      className='mb-4'
                       required
                       value={formValue.password}
                       onChange={onChange}
                     />
                     {/* 2 column grid layout for inline styling */}
-                    <div className="row mb-4">
-                      <div className="col">
+                    <div className='row mb-4'>
+                      <div className='col'>
                         {/* Simple link */}
                         {/* eslint-disable-next-line */}
                         <a
-                          href="#"
+                          href='#'
                           onClick={() =>
                             alert("Please contact your Adminterator!")
                           }
@@ -97,7 +94,7 @@ export default function LoginModal({ setLoggedIn }) {
                       </div>
                     </div>
                     {/* Submit button */}
-                    <button type="submit" className="btn btn-primary btn-block">
+                    <button type='submit' className='btn btn-primary btn-block'>
                       Sign in
                     </button>
                   </form>

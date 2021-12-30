@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link,useLocation} from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { MDBInput } from "mdb-react-ui-kit";
 import Axios from "axios";
 import Path from "path";
-import Loading from '../loading'
+import Loading from "../loading";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -30,7 +30,7 @@ export default function Table() {
     const makeRequest = async () => {
       try {
         const response = await Axios.get(
-          `http://localhost:8080/dir-tree?path=${path || "/"}`
+          `http://192.168.0.10/dir-tree?path=${path || "/"}`
         );
         setDirTree(response.data);
         setLoading("false");
@@ -79,40 +79,41 @@ export default function Table() {
   };
 
   return (
-    <section className="mb-4 mt-2">
-      <div className="card">
-        <div className="card-header text-center py-3">
-          <h5 className="mb-0 text-center d-flex">
+    <section className='mb-4 mt-2'>
+      <div className='card'>
+        <div className='card-header text-center py-3 px-2 px-sm-3'>
+          <h5 className='mb-0 text-center d-flex'>
             <div
-              className="
+              className='
               d-flex
               align-items-center
               me-auto
               ms-auto ms-sm-0
               mt-2 mt-sm-0
-            "
+            '
             >
               <MDBInput
-                id="search-input"
-                type="search"
-                label="Search"
+                id='search-input'
+                type='search'
+                label='Search'
                 onChange={search}
               />
             </div>
             <div
-              className="
+              className='
               d-flex
               align-items-center
+              ms-2
               mx-auto
               ms-sm-auto
               me-sm-0
               mt-2 mt-sm-0
-            "
+            '
             >
               <a
-                href={`http://localhost:8080/download-all?data=${data}`}
-                type="submit"
-                className="btn btn-danger shadow-4-primary me-3"
+                href={`http://192.168.0.10/download-all?data=${data}`}
+                type='submit'
+                className='btn btn-danger shadow-4-primary me-sm-3'
                 download
               >
                 Download All
@@ -120,84 +121,87 @@ export default function Table() {
             </div>
           </h5>
         </div>
-        <div className="card-body pt-0">
-          {loading === "true" ? (
-            <Loading />
-          ) : (
-            <div className="table-responsive">
-              <table
-                id="Table"
-                className="table table-hover text-nowrap table-sm table-auto"
-              >
-                <thead>
-                  <tr className="table-active">
-                    <th scope="col" colSpan={2}>
-                      name
-                    </th>
-                    <th scope="col" colSpan={1}>
-                      Size
-                    </th>
-                    <th scope="col" colSpan={2}>
-                      Date
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {dirTree.map((content, index) => {
-                    if (content.type === "director") {
-                      content.size = "-";
-                    } else if (content.size >= 1024 * 1024 * 1024) {
-                      content.size =
-                        Math.floor(content.size / (1024 * 1024 * 1024)) + " GB";
-                    } else if (content.size >= 1024 * 1024) {
-                      content.size =
-                        Math.floor(content.size / (1024 * 1024)) + " MB";
-                    } else {
-                      content.size = Math.floor(content.size / 1024) + " KB";
-                    }
-                    let date = new Date(content.atimeMs);
-                    return (
-                      <tr key={index}>
-                        <td colSpan={2}>
-                          <div className="form-check text-start">
-                            <input
-                              className="form-check-input"
-                              type="checkbox"
-                              onClick={handelCheckbox}
-                              value={content.name}
-                              id="flexCheckDefault"
-                            />
-                            {Path.extname(content.name) ? (
-                              <a
-                                href={`http://localhost:8080/download?file=${
-                                  path || "/"
-                                }${content.name}`}
-                                className="ms-2 text-default text-start"
-                                download
-                              >
-                                {content.name}
-                              </a>
-                            ) : (
-                              <Link
-                                to={`/?path=${path || "/"}${content.name}/`}
-                                className="ms-2 text-default text-start"
-                              >
-                                {content.name}
-                              </Link>
-                            )}
-                          </div>
-                        </td>
-                        <td>{content.size}</td>
-                        <td colSpan={2}>
-                          <p>{`${date.toLocaleString()}`}</p>
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-          )}
+        <div className='card-body pt-0'>
+          <div className='table-responsive'>
+            <table
+              id='Table'
+              className='table table-hover text-nowrap table-sm table-auto'
+            >
+              {loading === "true" ? (
+                <Loading />
+              ) : (
+                <div>
+                  <thead>
+                    <tr className='table-active'>
+                      <th scope='col' colSpan={2}>
+                        name
+                      </th>
+                      <th scope='col' colSpan={1}>
+                        Size
+                      </th>
+                      <th scope='col' colSpan={2}>
+                        Date
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {dirTree.map((content, index) => {
+                      if (content.type === "director") {
+                        content.size = "-";
+                      } else if (content.size >= 1024 * 1024 * 1024) {
+                        content.size =
+                          Math.floor(content.size / (1024 * 1024 * 1024)) +
+                          " GB";
+                      } else if (content.size >= 1024 * 1024) {
+                        content.size =
+                          Math.floor(content.size / (1024 * 1024)) + " MB";
+                      } else {
+                        content.size = Math.floor(content.size / 1024) + " KB";
+                      }
+                      let date = new Date(content.atimeMs);
+                      return (
+                        <tr key={index}>
+                          <td colSpan={2}>
+                            <div className='form-check text-start'>
+                              <input
+                                className='form-check-input'
+                                type='checkbox'
+                                onClick={handelCheckbox}
+                                value={content.name}
+                                id='flexCheckDefault'
+                              />
+                              {Path.extname(content.name) ? (
+                                <a
+                                  href={`http://192.168.0.10/download?file=${
+                                    path || "/"
+                                  }${content.name}`}
+                                  className='ms-2 text-default text-start'
+                                  download
+                                >
+                                  {content.name}
+                                </a>
+                              ) : (
+                                <Link
+                                  to={`/?path=${path || "/"}${content.name}/`}
+                                  className='ms-2 text-default text-start'
+                                >
+                                  {content.name}
+                                </Link>
+                              )}
+                            </div>
+                          </td>
+                          <td>{content.size}</td>
+                          <td colSpan={2}>
+                            <p>{`${date.toLocaleString()}`}</p>
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </div>
+              )}
+            </table>
+          </div>
         </div>
       </div>
     </section>
