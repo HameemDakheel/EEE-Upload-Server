@@ -16,7 +16,7 @@ export default function AdminTable() {
     const makeRequest = async () => {
       try {
         const response = await Axios.post(
-          `http://192.168.0.10/user/get-users`,
+          `http://localhost:8080/user/get-users`,
           { token }
         );
         setUsers(response.data.data);
@@ -51,7 +51,7 @@ export default function AdminTable() {
   };
   const handelDelete = async (username) => {
     try {
-      const response = await Axios.post("http://192.168.0.10/user/delete/", {
+      const response = await Axios.post("http://localhost:8080/user/delete/", {
         token: localStorage.getItem("token"),
         username,
       });
@@ -67,10 +67,10 @@ export default function AdminTable() {
     console.log(users);
     if (users) {
       return (
-        <div className='table-responsive'>
+        <div className="table-responsive">
           <table
-            id='Table'
-            className='table table-hover text-nowrap table-sm table-auto'
+            id="Table"
+            className="table table-hover text-nowrap table-sm table-auto mb-0"
           >
             <thead>
               <tr>
@@ -88,13 +88,13 @@ export default function AdminTable() {
                     <td>{user.path}</td>
                     <td>
                       <button
-                        type='button'
-                        className='btn mx-2 btn-danger btn-sm px-2'
+                        type="button"
+                        className="btn mx-2 btn-danger btn-sm px-2"
                         onClick={() => {
                           handelDelete(user.username);
                         }}
                       >
-                        <i className='fas fa-lg fa-trash-alt' />
+                        <i className="fas fa-lg fa-trash-alt" />
                       </button>
                       <UpdateModal username={user.username} path={user.path} />
                     </td>
@@ -107,47 +107,47 @@ export default function AdminTable() {
       );
     } else {
       return (
-        <div className='w-100 my-4 mx-3 text-center'>
+        <div className="w-100 my-4 mx-3 text-center">
           There is no users try add some
         </div>
       );
     }
   };
   return (
-    <section className='mb-4 mt-4'>
-      <div className='card'>
-        <div className='card-header text-center py-3'>
-          <h5 className='mb-0 text-center d-flex'>
+    <section className="mb-4 mt-4">
+      <div className="card">
+        <div className="card-header text-center py-3">
+          <h5 className="mb-0 text-center d-flex">
             <div
-              className='
+              className="
               d-flex
               align-items-center
               me-auto
               ms-auto ms-sm-0
               mt-2 mt-sm-0
-            '
+            "
             >
               <MDBInput
-                id='search-input'
-                type='search'
-                label='Search'
+                id="search-input"
+                type="search"
+                label="Search"
                 onChange={search}
               />
             </div>
             <div
-              className='
+              className="
               d-flex
               align-items-center
               mx-auto
               ms-sm-auto
               me-sm-0
-              mt-2 mt-sm-0'
+              mt-2 mt-sm-0"
             >
               <RegisterModal />
             </div>
           </h5>
         </div>
-        <div className='card-body pt-2'>
+        <div className="card-body pt-2">
           {loading === "true" ? (
             <Loading />
           ) : (
