@@ -1,27 +1,27 @@
 "use strict";
 require("dotenv").config();
 const express = require("express");
+const fs = require("fs");
 const http = require("http");
 const debug = require("debug");
 const cors = require("cors");
 const morgan = require("morgan");
 const path = require("path");
 const cookieParser = require("cookie-parser");
-const logger = require('./config/logger')
+const logger = require("./config/logger");
 
-require("./db")
+require("./db");
 
-const router = require("./router")
+const router = require("./router");
 const port = normalizePort(process.env.PORT || "8080");
 const app = express();
-
 
 app.set("views", path.join(__dirname, "build"));
 
 app.use(cors());
 app.use(morgan("common"));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "build")));
 
@@ -58,21 +58,19 @@ function normalizePort(val) {
  */
 
 function onError(error) {
-  if (error.syscall !== 'listen') {
+  if (error.syscall !== "listen") {
     throw error;
   }
 
-  var bind = typeof port === 'string'
-    ? 'Pipe ' + port
-    : 'Port ' + port;
+  var bind = typeof port === "string" ? "Pipe " + port : "Port " + port;
 
   // handle specific listen errors with friendly messages
   switch (error.code) {
-    case 'EACCES':
+    case "EACCES":
       logger.error(bind + " requires elevated privileges");
       process.exit(1);
       break;
-    case 'EADDRINUSE':
+    case "EADDRINUSE":
       logger.error(bind + " is already in use");
       process.exit(1);
       break;
@@ -87,9 +85,7 @@ function onError(error) {
 
 function onListening() {
   var addr = server.address();
-  var bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port;
-  debug('Listening on ' + bind);
-  logger.info(`listening on port ${port}`)
+  var bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
+  debug("Listening on " + bind);
+  logger.info(`listening on port ${port}`);
 }

@@ -1,22 +1,36 @@
 const mongoose = require("mongoose");
-const logger = require('./config/logger')
-const connectionString = process.env.CONNECTION_STRING || "mongodb://localhost:27017/";
+const logger = require("./config/logger");
+const connectionString =
+  process.env.CONNECTION_STRING || "mongodb://localhost:27017/";
 
-require("./modules/users")
+const User = require("./modules/users");
 
 if (process.env.APP_ENV === "production") {
   URI = process.env.PRODUCTION_CONNECTION_STRING;
 }
 
-mongoose.connect(connectionString, { useNewUrlParser: true ,useUnifiedTopology:true,useCreateIndex:true});
+mongoose.connect(connectionString, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+});
 
-mongoose.connection.on("connected", () =>
-  logger.info(`connected to mongo database`)
-);
-
+mongoose.connection.on("connected", () => {
+  logger.info(`connected to mongo database`);
+  User.findOne({ username: "admin" }, function (err, user) {
+    if (err || !user) {
+      let admin = new User();
+      admin.username = "admin";
+      admin.setPassword(process.env.ADMIN_PASSWORD);
+      admin.privileges = "admin";
+      admin.defaultPath = "/";
+      admin.save();
+    }
+  });
+});
 
 mongoose.connection.on("error", (err) => {
-  logger.error("mongoose connection error "+ err);
+  logger.error("mongoose connection error " + err);
 });
 mongoose.connection.on("disconnected", () => {
   logger.warn("mongoose disconnected");
@@ -24,7 +38,7 @@ mongoose.connection.on("disconnected", () => {
 
 const gracefulShutdown = (msg, callback) => {
   mongoose.connection.close(() => {
-    logger.warn("mongoose disconnected through "+ msg);
+    logger.warn("mongoose disconnected through " + msg);
     callback;
   });
 };
