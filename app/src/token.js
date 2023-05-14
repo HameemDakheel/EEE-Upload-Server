@@ -4,7 +4,7 @@ export default async function checkToken() {
   try {
     const token = localStorage.getItem("token");
 
-    const res = await axios.post("http://192.168.0.10/user/check-token", {
+    const res = await axios.post("http://localhost:8080/user/check-token", {
       token,
     });
     if (!res.data.error && res.data.decode) {

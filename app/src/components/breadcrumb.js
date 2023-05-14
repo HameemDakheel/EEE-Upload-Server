@@ -6,7 +6,7 @@ function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 
-export default function Breadcrumb({username}) {
+export default function Breadcrumb({ username }) {
   const query = useQuery();
   const [arrItems, setArrItems] = useState([]);
   const path = query.get("path");
@@ -18,7 +18,7 @@ export default function Breadcrumb({username}) {
       temp = temp.split("/");
       temp.shift();
       temp.pop();
-      var str = "" ;
+      var str = "";
       for (let i = 0; i < temp.length; i++) {
         str = str + "/" + temp[i];
         tempArr.push(str);
@@ -26,7 +26,8 @@ export default function Breadcrumb({username}) {
       setArrItems(tempArr);
     }
   };
-  useEffect(getListItems, [path,query]);
+  // eslint-disable-next-line
+  useEffect(getListItems, [path]);
 
   return (
     <>
