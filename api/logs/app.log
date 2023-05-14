@@ -13,3 +13,799 @@
 {"level":"info","message":"listening on port 8080","timestamp":"2021-12-21 10:11:20"}
 {"level":"warn","message":"mongoose disconnected","timestamp":"2021-12-21 10:11:50"}
 {"level":"error","message":"mongoose connection error MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017","timestamp":"2021-12-21 10:11:50"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-10 23:04:24"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-10 23:04:24"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-11 00:47:01"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 00:47:01"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 00:47:08"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 00:47:09"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 00:47:10"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 00:47:10"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 00:47:15"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 00:47:16"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-11 00:52:51"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-11 00:52:51"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-11 00:53:58"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-11 00:53:58"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-11 00:54:00"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-11 01:43:02"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-11 01:43:12"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-11 08:52:15"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-11 08:52:47"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-11 08:52:47"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-11 08:52:48"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-11 08:53:12"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-11 08:53:12"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-11 08:54:05"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-11 08:54:59"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-11 08:54:59"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-11 08:55:00"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-11 08:56:44"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-11 08:56:44"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-11 08:56:45"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-11 08:56:56"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-11 08:57:47"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-11 08:57:47"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-11 08:57:47"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-11 08:57:47"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-11 08:57:49"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-11 08:57:49"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-11 08:58:32"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 08:58:32"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-11 09:00:08"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-11 09:00:52"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-11 09:00:52"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-11 09:00:52"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-11 09:00:52"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-11 09:00:54"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-11 09:00:54"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-11 09:02:39"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2023-05-11 09:02:39"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2023-05-11 09:02:52"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2023-05-11 09:03:20"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-11 09:03:20"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2023-05-11 09:03:20"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2023-05-11 09:03:21"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2023-05-11 09:03:21"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 09:03:21"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 09:03:21"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 09:03:21"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-11 09:03:26"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-11 09:05:47"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-11 09:05:47"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2023-05-11 09:06:19"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2023-05-11 09:14:31"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2023-05-11 09:14:47"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-11 09:15:33"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-11 09:16:09"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 09:16:09"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 09:16:11"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 09:16:11"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 09:16:12"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 09:16:12"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 09:16:12"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 09:16:12"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 09:16:13"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 09:16:13"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-11 09:16:54"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-11 09:16:54"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-11 09:38:01"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2023-05-11 09:38:01"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2023-05-11 09:38:01"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 09:38:01"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 09:38:01"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2023-05-11 09:38:03"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2023-05-11 09:38:12"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2023-05-11 09:38:13"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2023-05-11 09:38:32"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-11 09:40:47"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-11 09:40:47"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-11 09:47:31"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 09:47:31"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-11 09:49:04"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-11 09:49:04"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-11 10:53:31"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 10:53:31"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 10:53:31"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 10:53:31"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-11 10:53:32"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-11 10:56:15"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-11 10:56:15"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-11 10:56:15"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 08:22:50"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 08:22:50"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 08:22:50"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 09:28:21"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 09:28:21"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 09:28:22"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 09:28:22"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 09:28:22"}
+{"code":"ENOENT","errno":-2,"level":"error","path":"/home/hameema/.steampid","syscall":"stat","timestamp":"2023-05-12 09:28:28"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 09:28:46"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 09:28:46"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 09:28:48"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 09:28:48"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 09:28:48"}
+{"code":"ENOENT","errno":-2,"level":"error","path":"/home/hameema/.steampid","syscall":"stat","timestamp":"2023-05-12 09:28:55"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 09:29:33"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 09:29:33"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 09:29:34"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 09:29:34"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 09:29:34"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 11:04:31"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 11:04:31"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 11:04:33"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 11:06:52"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 11:06:52"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 11:06:53"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 11:10:21"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 11:10:21"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 11:10:21"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 12:35:10"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 12:35:10"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 12:35:13"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 12:35:13"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 12:35:13"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 14:05:40"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 14:05:40"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:05:42"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:05:42"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 14:05:42"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 14:25:24"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 14:25:24"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:25:25"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:25:25"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 14:25:25"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 14:25:39"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 14:25:39"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:25:42"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:25:42"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 14:25:42"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 14:27:48"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 14:27:48"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:34:02"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:34:02"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 14:34:02"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 14:34:39"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 14:34:39"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:34:42"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:34:42"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 14:34:42"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 14:35:41"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 14:35:41"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:35:43"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:35:43"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 14:35:43"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 14:37:20"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 14:37:20"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:37:22"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:37:22"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 14:37:22"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 14:42:15"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 14:42:15"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 14:42:17"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 14:43:24"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 14:43:24"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:43:25"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:43:25"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 14:43:25"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 14:46:44"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 14:46:44"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:47:33"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:47:33"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 14:47:33"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 14:49:24"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 14:49:24"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:49:44"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:49:44"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 14:49:44"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 14:50:18"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:50:20"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:50:20"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 14:50:20"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 14:51:06"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 14:51:07"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 14:51:27"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-12 14:51:27"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 14:53:01"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 14:54:21"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 14:54:21"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:54:23"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 14:54:23"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 14:54:23"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 15:00:52"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 15:00:52"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 15:00:53"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 15:00:53"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 15:00:53"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 15:01:02"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 15:01:02"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 15:01:04"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 15:01:04"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 15:01:05"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 15:01:48"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 15:01:48"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 15:01:49"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 15:01:49"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 15:01:49"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 15:02:04"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 15:02:04"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 15:02:05"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 15:02:05"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 15:02:05"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 16:30:06"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 16:30:06"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 17:20:26"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 17:20:26"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 17:20:26"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 17:21:59"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 17:21:59"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 17:22:01"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 17:22:01"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 17:22:01"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 17:22:15"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 17:22:15"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 17:22:17"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 17:22:17"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 17:22:17"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 17:22:49"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 17:22:49"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 17:22:50"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 17:22:50"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 17:22:50"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 17:29:47"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 17:29:47"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 17:29:47"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 17:31:08"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 17:31:08"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 17:31:10"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 17:33:05"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 17:33:05"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 17:33:07"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 17:37:28"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 17:37:28"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 17:37:30"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 17:37:47"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 17:37:47"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 17:37:50"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 17:37:50"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 17:37:50"}
+{"level":"info","message":"admin logged in","timestamp":"2023-05-12 17:40:30"}
+{"level":"info","message":"admin logged in","timestamp":"2023-05-12 17:53:01"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 17:58:53"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 17:58:53"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 17:58:55"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:08:50"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:08:50"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:08:51"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:08:51"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:08:51"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:09:36"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:09:36"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:09:36"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:11:28"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:11:28"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:11:31"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:11:31"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:11:31"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:12:39"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:12:39"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:12:41"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:12:41"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:12:41"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:13:52"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:13:52"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:13:53"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:13:53"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:13:53"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:15:28"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:15:28"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:15:30"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:15:30"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:15:30"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:16:33"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:16:33"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:16:34"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:16:34"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:16:34"}
+{"level":"error","message":"The \"path\" argument must be of type string. Received undefined","timestamp":"2023-05-12 18:16:53"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:22:22"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:22:22"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:22:25"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:22:25"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:22:25"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:25:02"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:25:02"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:25:04"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:25:04"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:25:05"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:25:28"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:25:28"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:25:31"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:25:31"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:25:31"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:25:53"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:25:53"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:25:55"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:25:55"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:25:55"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:26:09"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:26:09"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:26:12"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:26:12"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:26:12"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:26:26"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:26:26"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:26:28"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:26:28"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:26:28"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:27:23"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:27:23"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:27:25"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:27:25"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:27:25"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:28:13"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:28:13"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:28:14"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:28:14"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:28:15"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:28:45"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:28:45"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:28:47"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:28:47"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:28:47"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:29:29"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:29:29"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:29:31"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:29:31"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:29:31"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:29:55"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:29:55"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:29:57"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:29:57"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:29:57"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:38:27"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:38:27"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:38:29"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:38:29"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:38:29"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:39:09"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:39:09"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:39:11"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:39:11"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:39:11"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:39:46"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:39:46"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:39:48"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:39:48"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:39:48"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:40:31"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:40:34"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:40:34"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:40:34"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:43:35"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:43:35"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:43:37"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:43:37"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:43:37"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:43:52"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:43:52"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:43:53"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:43:53"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:43:53"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:45:18"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:45:18"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:45:21"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:45:21"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:45:21"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:45:26"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:45:26"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:45:28"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:45:28"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:45:28"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:46:47"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:46:47"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:46:49"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:46:49"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:46:49"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:47:02"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:47:02"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:47:04"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:47:04"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:47:04"}
+{"level":"error","message":"The \"path\" argument must be of type string. Received undefined","timestamp":"2023-05-12 18:47:07"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:50:06"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:50:06"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:50:06"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:50:58"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:50:58"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:51:03"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:51:03"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:51:03"}
+{"level":"error","message":"The \"path\" argument must be of type string. Received undefined","timestamp":"2023-05-12 18:51:07"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:51:49"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:51:49"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:51:51"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:51:51"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:51:51"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'username')","timestamp":"2023-05-12 18:51:55"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:53:47"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:53:47"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:53:49"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:53:49"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:53:49"}
+{"level":"info","message":"admin add new user Admin","timestamp":"2023-05-12 18:54:09"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 18:56:21"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 18:56:21"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:56:22"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 18:56:22"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 18:56:22"}
+{"level":"info","message":"admin add new user Admin","timestamp":"2023-05-12 18:58:51"}
+{"level":"info","message":"admin add new user Admin","timestamp":"2023-05-12 19:00:01"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 19:04:00"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 19:04:00"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:04:02"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:04:02"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 19:04:02"}
+{"level":"info","message":"admin add new user Admin","timestamp":"2023-05-12 19:04:13"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 19:04:36"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 19:04:36"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:04:38"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:04:38"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 19:04:38"}
+{"level":"info","message":"admin add new user Admin","timestamp":"2023-05-12 19:04:49"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 19:05:48"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 19:05:48"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:05:50"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:05:50"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 19:05:50"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 19:09:17"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 19:09:17"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:09:20"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:09:20"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 19:09:20"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 19:09:28"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-12 19:09:28"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-12 19:09:28"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-12 19:09:28"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2023-05-12 19:22:35"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2023-05-12 19:22:38"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:33:15"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:33:15"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 19:33:15"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 19:36:01"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 19:36:01"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:36:03"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:36:03"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 19:36:03"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 19:36:55"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 19:36:55"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:36:57"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:36:57"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 19:36:57"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 19:39:27"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 19:39:27"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:39:29"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:39:29"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 19:39:29"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 19:40:16"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 19:40:16"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:40:17"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:40:17"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 19:40:17"}
+{"level":"warn","message":"Admin1 has been updated by admin","timestamp":"2023-05-12 19:40:19"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 19:42:14"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 19:42:14"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:42:15"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:42:15"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 19:42:15"}
+{"level":"warn","message":"Admin has been deleted by admin","timestamp":"2023-05-12 19:42:18"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 19:44:35"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 19:44:35"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 19:44:37"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 19:44:52"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 19:44:52"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:44:54"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:44:54"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 19:44:54"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 19:46:49"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 19:46:49"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:46:52"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:46:52"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 19:46:52"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 19:46:56"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 19:46:56"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:46:58"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:46:58"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 19:46:58"}
+{"level":"warn","message":"Admin1 has been deleted by admin","timestamp":"2023-05-12 19:47:06"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 19:48:59"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-12 19:48:59"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:49:01"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-12 19:49:01"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 19:49:01"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 19:56:05"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-12 19:56:05"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-12 19:56:05"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-12 19:56:05"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-12 19:56:07"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 20:04:36"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 21:58:27"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 21:58:44"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-12 21:58:44"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2023-05-12 22:01:03"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-12 22:01:36"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-12 22:01:54"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2023-05-12 22:01:54"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2023-05-12 22:01:54"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 12:52:55"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 12:52:55"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-13 12:52:55"}
+{"level":"info","message":"admin logged in","timestamp":"2023-05-13 22:53:16"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-13 23:31:56"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-13 23:31:56"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:31:58"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:31:58"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-13 23:31:58"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:33:49"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:33:49"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-13 23:33:49"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-13 23:35:09"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-13 23:35:09"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:35:12"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:35:12"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-13 23:35:12"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-13 23:38:30"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-13 23:38:31"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:38:34"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:38:34"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-13 23:38:34"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-13 23:39:25"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-13 23:39:25"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:39:27"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:39:27"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-13 23:39:27"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:53:27"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:53:27"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-13 23:53:27"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-13 23:53:43"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-13 23:53:43"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:53:44"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:53:44"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-13 23:53:44"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-13 23:54:45"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-13 23:54:45"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:54:47"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:54:47"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-13 23:54:47"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-13 23:55:13"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-13 23:55:13"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-13 23:55:14"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-13 23:55:27"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-13 23:55:27"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:55:29"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:55:29"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-13 23:55:29"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-13 23:56:37"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-13 23:56:37"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:56:39"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:56:39"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-13 23:56:39"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-13 23:58:16"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-13 23:58:16"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:58:18"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:58:18"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-13 23:58:18"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-13 23:58:58"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-13 23:58:58"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:59:00"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-13 23:59:00"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-13 23:59:00"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:00:10"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:00:10"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 00:00:10"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:00:45"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:00:45"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 00:00:45"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 00:01:01"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 00:01:01"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:01:04"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:01:04"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 00:01:04"}
+{"code":"ERR_INVALID_ARG_TYPE","level":"error","timestamp":"2023-05-14 00:01:09"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 00:01:44"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 00:01:44"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:01:46"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:01:46"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 00:01:46"}
+{"code":"ERR_INVALID_ARG_TYPE","level":"error","timestamp":"2023-05-14 00:01:51"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 00:03:35"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 00:03:35"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:03:37"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:03:37"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 00:03:38"}
+{"code":"ERR_INVALID_ARG_TYPE","level":"error","timestamp":"2023-05-14 00:03:41"}
+{"code":"ERR_INVALID_ARG_TYPE","level":"error","timestamp":"2023-05-14 00:04:10"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 00:05:37"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 00:05:37"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:05:39"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:05:39"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 00:05:39"}
+{"code":"ERR_INVALID_ARG_TYPE","level":"error","timestamp":"2023-05-14 00:05:41"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 00:06:35"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 00:06:35"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:06:36"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:06:36"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 00:06:36"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 00:07:00"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 00:07:00"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:07:02"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:07:02"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 00:07:02"}
+{"code":1009,"httpCode":413,"level":"error","timestamp":"2023-05-14 00:08:53"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 00:09:29"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 00:09:29"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:09:31"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:09:31"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 00:09:31"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 00:12:28"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 00:12:28"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:12:30"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:12:30"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 00:12:30"}
+{"code":1009,"httpCode":413,"level":"error","timestamp":"2023-05-14 00:12:38"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 00:13:19"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 00:13:19"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:13:20"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:13:20"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 00:13:20"}
+{"code":1009,"httpCode":413,"level":"error","timestamp":"2023-05-14 00:13:30"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 00:15:24"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-14 00:15:24"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-14 00:15:24"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-14 00:15:24"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-14 00:15:26"}
+{"level":"warn","message":"mongoose disconnected through Heroku app shutdown","timestamp":"2023-05-14 00:23:43"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:27:19"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:27:19"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 00:27:19"}
+{"code":1009,"httpCode":413,"level":"error","timestamp":"2023-05-14 00:28:59"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 00:29:23"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 00:29:23"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:29:26"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:29:26"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 00:29:27"}
+{"level":"info","message":"admin is uploading file0 to undefined","timestamp":"2023-05-14 00:30:55"}
+{"level":"info","message":"admin is finish uploading","timestamp":"2023-05-14 00:30:55"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 00:32:02"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 00:32:02"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:32:05"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:32:05"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 00:32:05"}
+{"level":"info","message":"admin is uploading file0 to undefined","timestamp":"2023-05-14 00:33:50"}
+{"level":"info","message":"admin is finish uploading","timestamp":"2023-05-14 00:33:50"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 00:35:28"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 00:35:28"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:35:31"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:35:31"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 00:35:31"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 00:36:07"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 00:36:07"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:36:09"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:36:09"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 00:36:09"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 00:37:03"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 00:37:03"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:37:05"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:37:05"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 00:37:05"}
+{"level":"info","message":"admin is uploading file0 to undefined","timestamp":"2023-05-14 00:39:10"}
+{"level":"info","message":"admin is finish uploading","timestamp":"2023-05-14 00:39:10"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 00:41:18"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 00:41:18"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:41:21"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:41:21"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 00:41:21"}
+{"level":"info","message":"admin is uploading file0 to undefined","timestamp":"2023-05-14 00:43:37"}
+{"level":"info","message":"admin is finish uploading","timestamp":"2023-05-14 00:43:37"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 00:45:23"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 00:45:23"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:45:25"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 00:45:25"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 00:45:25"}
+{"level":"info","message":"admin is uploading file0 to undefined","timestamp":"2023-05-14 00:56:18"}
+{"level":"info","message":"admin is finish uploading","timestamp":"2023-05-14 00:56:18"}
+{"level":"info","message":"admin is uploading file0 to undefined","timestamp":"2023-05-14 00:56:54"}
+{"level":"info","message":"admin is finish uploading","timestamp":"2023-05-14 00:56:54"}
+{"level":"info","message":"admin is uploading file0 to undefined","timestamp":"2023-05-14 00:56:59"}
+{"level":"info","message":"admin is finish uploading","timestamp":"2023-05-14 00:56:59"}
+{"level":"info","message":"admin is uploading file0 to undefined","timestamp":"2023-05-14 00:57:20"}
+{"level":"info","message":"admin is finish uploading","timestamp":"2023-05-14 00:57:20"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 01:01:24"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 01:01:24"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:01:26"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:01:26"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 01:01:26"}
+{"level":"info","message":"admin is uploading Capture.PNG to undefined","timestamp":"2023-05-14 01:01:29"}
+{"level":"info","message":"admin is finish uploading","timestamp":"2023-05-14 01:01:29"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 01:07:08"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:07:10"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:07:10"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 01:07:10"}
+{"level":"info","message":"admin is uploading Capture.PNG to /home/hameema/Desktop/admin//Capture.PNG","timestamp":"2023-05-14 01:07:14"}
+{"level":"info","message":"admin is finish uploading","timestamp":"2023-05-14 01:07:14"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 01:07:55"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 01:07:55"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:07:57"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:07:57"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 01:07:57"}
+{"level":"info","message":"admin is uploading Capture.PNG to /home/hameema/Desktop/admin/Capture.PNG","timestamp":"2023-05-14 01:07:59"}
+{"level":"info","message":"admin is finish uploading","timestamp":"2023-05-14 01:07:59"}
+{"level":"info","message":"admin is finish uploading","timestamp":"2023-05-14 01:07:59"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 01:08:39"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 01:08:39"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:08:41"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:08:41"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 01:08:41"}
+{"level":"info","message":"admin is uploading Capture.PNG to /home/hameema/Desktop/admin/Capture.PNG","timestamp":"2023-05-14 01:08:45"}
+{"level":"info","message":"admin is finish uploading","timestamp":"2023-05-14 01:08:45"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 01:10:36"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-14 01:10:36"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-14 01:10:36"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-14 01:10:36"}
+{"level":"warn","message":"mongoose disconnected through app termination","timestamp":"2023-05-14 01:10:37"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:11:55"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:11:55"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 01:11:55"}
+{"level":"info","message":"admin is uploading Capture.PNG to /home/hameema/Desktop/admin/Capture.PNG","timestamp":"2023-05-14 01:12:05"}
+{"level":"info","message":"admin is finish uploading","timestamp":"2023-05-14 01:12:05"}
+{"level":"info","message":"admin is finish uploading","timestamp":"2023-05-14 01:12:05"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 01:13:30"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 01:13:30"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:13:32"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:13:32"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 01:13:32"}
+{"level":"info","message":"admin is uploading Capture.PNG to /home/hameema/Desktop/admin/Capture.PNG","timestamp":"2023-05-14 01:13:35"}
+{"level":"info","message":"admin is finish uploading","timestamp":"2023-05-14 01:13:35"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 01:15:21"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 01:15:21"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 01:15:23"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 01:17:18"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 01:17:18"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:17:19"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:17:19"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 01:17:19"}
+{"code":"ERR_INVALID_ARG_TYPE","level":"error","timestamp":"2023-05-14 01:17:22"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 01:18:56"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 01:18:56"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:18:58"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:18:58"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 01:18:58"}
+{"code":"ERR_INVALID_ARG_TYPE","level":"error","timestamp":"2023-05-14 01:19:02"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 01:19:36"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 01:19:36"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:19:38"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:19:38"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 01:19:38"}
+{"code":"ERR_INVALID_ARG_TYPE","level":"error","timestamp":"2023-05-14 01:19:41"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 01:21:42"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 01:21:42"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:21:44"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:21:44"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 01:21:44"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:22:53"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:22:53"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 01:22:53"}
+{"level":"info","message":"admin is uploading Capture.PNG to undefined","timestamp":"2023-05-14 01:22:58"}
+{"level":"info","message":"admin is finish uploading","timestamp":"2023-05-14 01:22:58"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 01:24:21"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 01:24:21"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:24:22"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:24:22"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 01:24:22"}
+{"level":"warn","message":"mongoose disconnected","timestamp":"2023-05-14 01:24:51"}
+{"level":"warn","message":"mongoose disconnected through nodemon restart","timestamp":"2023-05-14 01:24:51"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:24:53"}
+{"level":"info","message":"listening on port 8080","timestamp":"2023-05-14 01:24:53"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 01:24:53"}
+{"level":"info","message":"connected to mongo database","timestamp":"2023-05-14 01:25:08"}
