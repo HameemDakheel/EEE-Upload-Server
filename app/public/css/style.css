@@ -1,82 +1,207 @@
 body {
-	margin: 0;
-	height: 100vh;
-	width: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 main {
-	height: 100vh;
-	width: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .random-0 {
-	background-color: #1266f1;
+  background-color: #1266f1;
 }
 
 .random-1 {
-	background: hsla(217, 100%, 50%, 1);
-	background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  background: hsla(217, 100%, 50%, 1);
+  background: linear-gradient(
+    90deg,
+    hsla(217, 100%, 50%, 1) 0%,
+    hsla(186, 100%, 69%, 1) 100%
+  );
 }
 
 .random-2 {
-	background: hsla(339, 100%, 55%, 1);
-	background: linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+  background: hsla(339, 100%, 55%, 1);
+  background: linear-gradient(
+    90deg,
+    hsla(339, 100%, 55%, 1) 0%,
+    hsla(197, 100%, 64%, 1) 100%
+  );
 }
 
 .random-3 {
-	background: hsla(333, 100%, 53%, 1);
-	background: linear-gradient(90deg, hsla(333, 100%, 53%, 1) 0%, hsla(33, 94%, 57%, 1) 100%);
+  background: hsla(333, 100%, 53%, 1);
+  background: linear-gradient(
+    90deg,
+    hsla(333, 100%, 53%, 1) 0%,
+    hsla(33, 94%, 57%, 1) 100%
+  );
 }
 
 .random-4 {
-	background: hsla(152, 100%, 50%, 1);
-	background: linear-gradient(90deg, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  background: hsla(152, 100%, 50%, 1);
+  background: linear-gradient(
+    90deg,
+    hsla(152, 100%, 50%, 1) 0%,
+    hsla(186, 100%, 69%, 1) 100%
+  );
 }
 
 .random-5 {
-	background: #4facfe;
-	background: -webkit-linear-gradient(to right, rgba(79, 172, 254, 0.5), rgba(0, 242, 254, 0.5));
-	background: linear-gradient(to right, rgba(79, 172, 254, 0.5), rgba(0, 242, 254, 0.5))
+  background: #4facfe;
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(79, 172, 254, 0.5),
+    rgba(0, 242, 254, 0.5)
+  );
+  background: linear-gradient(
+    to right,
+    rgba(79, 172, 254, 0.5),
+    rgba(0, 242, 254, 0.5)
+  );
 }
 
 .random-6 {
-	background: #fa709a;
-	background: -webkit-linear-gradient(to right, rgba(250, 112, 154, 0.5), rgba(254, 225, 64, 0.5));
-	background: linear-gradient(to right, rgba(250, 112, 154, 0.5), rgba(254, 225, 64, 0.5))
+  background: #fa709a;
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(250, 112, 154, 0.5),
+    rgba(254, 225, 64, 0.5)
+  );
+  background: linear-gradient(
+    to right,
+    rgba(250, 112, 154, 0.5),
+    rgba(254, 225, 64, 0.5)
+  );
 }
 
-td, th, p {
-	vertical-align: middle;
-	text-align: center !important;
-	/* text-overflow: ellipsis;
-  /* word-wrap: normal; */
-	/*word-break: keep-all; */
-}
-
+td,
+th,
 p {
-	margin: 0;
+  vertical-align: middle;
+  text-align: center !important;
+  /* text-overflow: ellipsis;
+  /* word-wrap: normal; */
+  /*word-break: keep-all; */
 }
 
-thead, tbody {
-	width: 100%;
+thead,
+tbody {
+  width: 100%;
 }
 
-
-tbody tr:last-of-type th, tbody tr:last-of-type td {
-	border: none;
+tbody tr:last-of-type th,
+tbody tr:last-of-type td {
+  border: none;
 }
 
-
-@media (max-width:964px) {
-	td, th {
-		padding: .4rem !important;
-	}
+@media (max-width: 964px) {
+  td,
+  th {
+    padding: 0.4rem !important;
+  }
 }
 
+.alert {
+  pointer-events: auto !important;
+  /* position: fixed; */
 
+  top: 3rem !important;
+}
+
+@font-face {
+  font-family: "LobsterTwo";
+  font-style: normal;
+  font-weight: 400;
+  src: local("LobsterTwo"),
+    url("../webfonts/LobsterTwo-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "LobsterTwo";
+  font-style: normal;
+  font-weight: bold;
+  src: local("LobsterTwo"),
+    url("../webfonts/LobsterTwo-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "LobsterTwo";
+  font-style: italic;
+  font-weight: bold;
+  src: local("LobsterTwo"),
+    url("../webfonts/LobsterTwo-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "LobsterTwo";
+  font-style: italic;
+  font-weight: 400;
+  src: local("LobsterTwo"),
+    url("../webfonts/LobsterTwo-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lobster";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Lobster"),
+    url("../webfonts/Lobster-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lobster";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Lobster"), url("../webfonts/Lobster-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lobster";
+  font-style: italic;
+  font-weight: bold;
+  src: local("Lobster"),
+    url("../webfonts/Lobster-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lobster";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Lobster"),
+    url("../webfonts/Lobster-Italic.ttf") format("truetype");
+}
+
+.lobster-font {
+  font-family: LobsterTwo;
+  font-style: italic;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.big-font {
+  font-size: 11rem;
+}
+
+@media (max-width: 768px) {
+  .btn-lg {
+    padding: 0.625rem 1.5rem 0.5rem 1.5rem;
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 405px) {
+  .px-s-4 {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+  }
+
+  .py-sm-2 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+}
