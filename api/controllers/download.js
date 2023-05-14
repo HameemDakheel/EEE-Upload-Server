@@ -4,7 +4,7 @@ const extname = Path.extname;
 const archiver = require("archiver");
 const defaultPath = process.env.DEFAULT_PATH;
 const trashPath = process.env.TRASH_PATH;
-const logger =require('../config/logger');
+const logger = require("../config/logger");
 
 function getDefaultTree(req, res) {
   var dirPath = req.query.path || "/";
@@ -51,26 +51,31 @@ function downloadFiles(req, res) {
     }
   }
   zip.finalize();
-  zip.on('finish',()=>{
-        logger.verbose(`${extname(path)} have been ziped and downloaded `);
-  })
+  zip.on("finish", () => {
+    logger.verbose(`${extname(path)} have been ziped and downloaded `);
+  });
   zip.on("error", function (err) {
     logger.error(err);
     res.end();
   });
 }
-
+// write a function that responds to the requste only download one file and it recives file path with no authintication
 function downloadOneFile(req, res) {
-  var isFile = fs.statSync(Path.join(defaultPath, req.query.file)).isFile();
-  if (isFile) {
-    logger.verbose(
-      `someone had just download ${req.query.file}`
-    );
-    return res.status(200).download(Path.join(defaultPath, req.query.file));
+  const { path, filename } = req.query;
+  const filePath = Path.join(defaultPath, path, filename);
+
+  try {
+    if (fs.existsSync(filePath)) {
+      logger.verbose(`someone had just download ${filename}`);
+      return res.status(200).download(filePath);
+    }
+    return res
+      .status(403)
+      .json({ error: "true", message: "this is not a A file" });
+  } catch (error) {
+    logger.error(error);
+    return res.status(500).json({ error: "true", message: "Download failed" });
   }
-  return res
-    .status(403)
-    .json({ error: "true", message: "this is not a A file" });
 }
 
 function deleteFile(req, res) {
@@ -78,27 +83,27 @@ function deleteFile(req, res) {
   const { path, filename } = req.body;
   const oldPath = Path.join(defaultPath, username, path, filename);
   const newPath = Path.join(trashPath, username);
-    try {
-      if (!fs.existsSync(newPath)) {
-        fs.mkdirSync(newPath, {
-          recursive: true,
-        });
-      }
-    } catch (error) {
-      logger.error(error);
+  try {
+    if (!fs.existsSync(newPath)) {
+      fs.mkdirSync(newPath, {
+        recursive: true,
+      });
     }
+  } catch (error) {
+    logger.error(error);
+  }
   try {
     var isFile = fs.statSync(oldPath).isFile();
     if (isFile) {
-      fs.rename(oldPath, Path.join(newPath, filename),(err) => {
+      fs.rename(oldPath, Path.join(newPath, filename), (err) => {
         if (err) {
           logger.error(err);
-          return res.status(500).json({error: "true", message: "Delete failed"});
+          return res
+            .status(500)
+            .json({ error: "true", message: "Delete failed" });
         }
         logger.warn(`${username} just deleted ${filename} successfully`);
-          return res
-            .status(200)
-            .json({ error: "", message: "Delete success" });
+        return res.status(200).json({ error: "", message: "Delete success" });
       });
     }
   } catch (error) {
