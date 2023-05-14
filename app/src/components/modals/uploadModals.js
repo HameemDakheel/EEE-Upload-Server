@@ -39,10 +39,11 @@ export default function UploadModal({ query, username }) {
     var formData = new FormData();
 
     for (let j = 0; j < Files.length; j++) {
-      formData.append(`file${j}`, Files[j]);
+      console.log(Files[j].name);
+      formData.append(Files[j].name, Files[j]);
     }
-
-    var url = `http://192.168.0.10/upload/${username}?path=${
+    formData.append("token", localStorage.getItem("token"));
+    var url = `http://localhost:8080/upload/${username}?path=${
       query.get("path") || "/"
     }`;
     console.log(Files.length, form);
@@ -79,15 +80,11 @@ export default function UploadModal({ query, username }) {
   return (
     <>
       <MDBBtn onClick={toggleShow}>Upload Files</MDBBtn>
-      <MDBModal
-        show={uploadModal}
-        getOpenState={(e) => setUploadModal(e)}
-        tabIndex='-1'
-      >
+      <MDBModal show={uploadModal} setShow={setUploadModal} tabIndex="-1">
         <MDBModalDialog>
           <MDBModalContent>
             <MDBModalBody>
-              <MDBTabs pills justify className='mb-3'>
+              <MDBTabs pills justify className="mb-3">
                 <MDBTabsItem>
                   <MDBTabsLink
                     onClick={() => handleTabClick("tab1")}
@@ -108,23 +105,23 @@ export default function UploadModal({ query, username }) {
               <MDBTabsContent>
                 <MDBTabsPane show={ActiveTab === "tab1"}>
                   <form onSubmit={handleSubmit}>
-                    <p class='note note-danger'>
+                    {/* <p class="note note-danger">
                       <strong>NOTE: </strong>{" "}
                       {`Please Make Sure Your are in The Right Folder: '/${username}${
                         query.get("path") || "/"
                       }'`}
-                    </p>
+                    </p> */}
 
                     <MDBInput
                       block
-                      className='mt-3 '
-                      type='file'
+                      className="mt-3 "
+                      type="file"
                       required
                       onChange={(e) => {
                         setFiles(e.target.files);
                       }}
                     />
-                    <MDBProgress height='20' className='mt-3 rounded-2'>
+                    <MDBProgress height="20" className="mt-3 rounded-2">
                       <MDBProgressBar
                         striped
                         animated
@@ -137,9 +134,9 @@ export default function UploadModal({ query, username }) {
                     </MDBProgress>
                     <hr />
                     <MDBBtn
-                      type='submit'
-                      className='mt-3  btn-block'
-                      color='primary'
+                      type="submit"
+                      className="mt-3  btn-block"
+                      color="primary"
                     >
                       Upload
                     </MDBBtn>
@@ -147,22 +144,22 @@ export default function UploadModal({ query, username }) {
                 </MDBTabsPane>
                 <MDBTabsPane show={ActiveTab === "tab2"}>
                   <form onSubmit={handleSubmit}>
-                    <p class='note note-danger'>
+                    {/* <p class="note note-danger">
                       <strong>NOTE: </strong>{" "}
                       {`Please Make Sure Your are in The Right Folder: '/${username}${
                         query.get("path") || "/"
                       }'`}
-                    </p>
+                    </p> */}
                     <MDBInput
-                      className='mt-3 '
-                      type='file'
+                      className="mt-3 "
+                      type="file"
                       multiple={true}
                       required
                       onChange={(e) => {
                         setFiles(e.target.files);
                       }}
                     />
-                    <MDBProgress height='20' className='mt-3 rounded-2'>
+                    <MDBProgress height="20" className="mt-3 rounded-2">
                       <MDBProgressBar
                         striped
                         animated
@@ -175,10 +172,10 @@ export default function UploadModal({ query, username }) {
                     </MDBProgress>
                     <hr />
                     <MDBBtn
-                      type='submit'
+                      type="submit"
                       block
-                      className='mt-1'
-                      color='primary'
+                      className="mt-1"
+                      color="primary"
                     >
                       Upload
                     </MDBBtn>

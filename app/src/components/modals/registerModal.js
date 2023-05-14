@@ -30,14 +30,14 @@ export default function RegisterModal() {
     };
     try {
       const response = await Axios.post(
-        "http://192.168.0.10/user/register",
+        "http://localhost:8080/user/register",
         data
       );
       if (!response.data.error) {
         Alert.success("user has been registered");
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       Alert.error("Something went wrong");
     }
   };
@@ -50,53 +50,49 @@ export default function RegisterModal() {
     <>
       <MDBBtn onClick={toggleShow}>Add User</MDBBtn>
       {/* modal */}
-      <MDBModal
-        show={registerModal}
-        getOpenState={(e) => setRegisterModal(e)}
-        tabIndex='-1'
-      >
+      <MDBModal show={registerModal} setShow={setRegisterModal} tabIndex="-1">
         <MDBModalDialog>
           <MDBModalContent>
             <MDBModalBody>
-              <div className='p-5'>
-                <div className='text-center'>
-                  <form onSubmit={handleSubmit} id='form1'>
+              <div className="p-5">
+                <div className="text-center">
+                  <form onSubmit={handleSubmit} id="form1">
                     {/* Email input */}
                     <MDBInput
-                      id='username'
-                      name='username'
-                      label='Username'
-                      type='text'
+                      id="username"
+                      name="username"
+                      label="Username"
+                      type="text"
                       required
-                      className='mb-4'
-                      validation='Looks good!'
+                      className="mb-4"
+                      validation="Looks good!"
                       value={formValue.username}
                       onChange={onChange}
                     />
                     {/* Password input */}
                     <MDBInput
-                      id='password'
-                      name='password'
-                      label='Password'
-                      type='password'
+                      id="password"
+                      name="password"
+                      label="Password"
+                      type="password"
                       required
-                      className='mb-4'
-                      validation='Looks good!'
+                      className="mb-4"
+                      validation="Looks good!"
                       value={formValue.password}
                       onChange={onChange}
                     />
                     <MDBInput
-                      label='Path'
-                      id='path'
-                      name='path'
-                      type='text'
-                      className='mb-4'
+                      label="Path"
+                      id="path"
+                      name="path"
+                      type="text"
+                      className="mb-4"
                       required
                       value={formValue.path}
                       onChange={onChange}
                     />
                     {/* Submit button */}
-                    <button type='submit' className='btn btn-primary btn-block'>
+                    <button type="submit" className="btn btn-primary btn-block">
                       Add User
                     </button>
                   </form>
