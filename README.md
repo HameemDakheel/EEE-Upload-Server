@@ -29,7 +29,7 @@ Before installing the EEE-Library, make sure you have the following requirements
 
 To install and set up the EEE-Library on your local network, follow the steps below:
 
-1. Clone the repository: `git clone https://github.com/your-username/EEE-Library.git`
+1. Clone the repository: `git clone https://github.com/HameemDakheel/EEE-Upload-Server.git`
 2. Install the required dependencies: `npm install`
 3. Set up the database (MongoDB) and configure the connection details in the `db.js` file.
 4. Configure the server settings by modifying the `.env` file to suit your local network environment.
@@ -70,3 +70,7 @@ Ensure that your code adheres to the project's coding conventions and that you h
 ## License
 
 The EEE-Library is distributed under the MIT License.
+
+## Contact
+
+For questions, suggestions, or feedback, please contact the project maintainer at [HameemDakheel@outlook.com](mailto:HameemDakheel@outlook.com) or visit the project's GitHub repository: [EEE-Library](https://github.com/HameemDakheel/EEE-Upload-Server)
